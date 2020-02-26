@@ -10,7 +10,9 @@ import { TarifsComponent } from './component/tarifs/tarifs.component';
 import { FayardComponent } from './component/fayard/fayard.component';
 import { FreneComponent } from './component/frene/frene.component';
 import { ContactComponent } from './component/contact/contact.component';
-import { AboutComponent } from './component/about/about.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+
 
 @NgModule({
   declarations: [
@@ -21,12 +23,14 @@ import { AboutComponent } from './component/about/about.component';
     FayardComponent,
     FreneComponent,
     ContactComponent,
-    AboutComponent
+ 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatMenuModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,23 +1,27 @@
 .body{
-        background-image: url("/assets/vercors.jpg");
+        background-image: url("/assets/t.png");
         background-repeat: no-repeat;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
         height: 100%;
 }
 
-h1, h3{
+h1{
     font-family: menu;
-    font-size: 4.5em;
+    font-size: 5em;
     display: flex;
     justify-content:center;
+    margin: 1%;
 }
 .titles{
     padding-top: 4%;
- 
 }
 .about{
     font-family: skinny;
     font-size: 1.3em;
-    width: 40%;
+    width: 50%;
+    height: auto;
     padding: 1%;
     background-color: #4a6873;
     color: #fcfbf7;
@@ -25,9 +29,28 @@ h1, h3{
     opacity: 0.9;
     margin-left: auto;
     margin-right: auto;
-
+    margin-top: 4%;
+    text-align: justify;
+}
+.body2{
+    background-color: #f9f9f9;
+    width: 100%;
+    display: inline-block
+}
+.test{
+  
+    width: 20%;
+    height: auto;
+    padding: 1%;
+    background-color: #4a6873;
+    border-radius: 30px;
+    opacity: 0.9;;
+    margin-top: 4%;
 }
 p{
     margin-top: 1%;
     margin-bottom: 1%
+}
+.test{
+    justify-content: flex-end
 }

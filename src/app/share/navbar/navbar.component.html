@@ -1,9 +1,8 @@
-<nav>
-    <ul>
-        <li routerLink="/">Accueil</li>
-        <li routerLink="/fayard">Le Fayard</li>
-        <li routerLink="/frene">Le Frene</li>
-        <li routerLink="/tarifs">Tarifs</li>
-        <li routerLink="/contact">Contact</li>
-    </ul>
-</nav>
+<button mat-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item>Accueil</button>
+    <button mat-menu-item>Le Fayard</button>
+    <button mat-menu-item>Le Frêne</button>
+    <button mat-menu-item>Tarifs</button>
+    <button mat-menu-item>Contact</button>
+</mat-menu>
