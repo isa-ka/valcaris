@@ -12,6 +12,11 @@ import { FreneComponent } from './component/frene/frene.component';
 import { ContactComponent } from './component/contact/contact.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CarouselComponent } from './component/carousel/carousel.component';
+import { NgxHmCarouselModule } from 'ngx-hm-carousel';
+import 'hammerjs';
+
 
 
 @NgModule({
@@ -23,6 +28,7 @@ import { MatButtonModule } from '@angular/material/button';
     FayardComponent,
     FreneComponent,
     ContactComponent,
+    CarouselComponent,
  
   ],
   imports: [
@@ -30,7 +36,9 @@ import { MatButtonModule } from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MDBBootstrapModule.forRoot(),
+    NgxHmCarouselModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

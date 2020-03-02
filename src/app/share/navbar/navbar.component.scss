@@ -1,0 +1,34 @@
+.navbar  li{
+	color: rgba(0,0,0,0.2);
+	font-weight: 700;
+    text-shadow: none;
+    text-decoration: none;
+    list-style-type: none;
+};
+
+.navbar li::before {
+	color: black;
+	content: attr(data-hover);
+	position: absolute;
+	transition: transform 0.3s, opacity 0.3s;
+};
+
+.navbar li:hover::before,
+.navbar li:focus::before {
+	transform: scale(0.9);
+	opacity: 0;
+};
+.navbar{
+    display: block;
+};
+li{
+    font-family: skinny;
+    font-size: 2em;
+    cursor: pointer;
+};
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+};
+

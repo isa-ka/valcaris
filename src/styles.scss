@@ -2,13 +2,23 @@
 
 html, body { height: 100%; }
 body { 
-  margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: #f9f9f9; background-image: url("/assets/t.png")
+  margin: 0; 
+  font-family: Roboto, "Helvetica Neue", sans-serif; 
+  background-color: #f9f9f9; 
+  background-image: url("/assets/t.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  .mat-elevation-z4{
+    box-shadow: none;
+    background-color: #1fe0;
+}
 }
 @font-face{
   font-family: menu;
-  src: url(fonts/sibertha/Sibertha.otf) format("opentype")
+  src: url(fonts/anugrah/Anugrah.ttf) format("opentype")
 }
 @font-face{
   font-family: skinny;
-  src: url(fonts/MySkinnyType.ttf) format("opentype")
+  src: url(fonts/vertigo/VertigoFLF-Bold.ttf) format("opentype")
 }

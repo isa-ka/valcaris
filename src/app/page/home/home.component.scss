@@ -1,25 +1,91 @@
-.body{
-        background-image: url("/assets/t.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+
+//common
+p{
+    margin-top: 1%;
+    margin-bottom: 1%
+};
+.about, .presentation, .gites, .echaillon{
+    font-family: skinny;
+};
+.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .descriptionEchaillon{
+    font-size: 1.6em;
 }
 
-h1{
-    font-family: menu;
-    font-size: 5em;
+//title animation
+.link {
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	font-size: 4em;
+	color: #9e9ba4;
+	display: inline-block;
+}
+.valcaris {
+	text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+	line-height: 0.75;
+	color: #424242;
+}
+
+.valcaris:hover {
+	color: #b2b0a9;
+}
+
+.valcaris::after {
+	content: '';
+	position: absolute;
+	height: 16px;
+	width: 100%;
+	top: 50%;
+	margin-top: -8px;
+	right: 0;
+	background: #F9F9F9;
+	transform: translate3d(-100%,0,0);
+	transition: transform 0.4s;
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+.valcaris:hover::after {
+	transform: translate3d(100%,0,0);
+}
+
+.valcaris::before {
+	content: attr(data-letters);
+	position: absolute;
+	z-index: 2;
+	overflow: hidden;
+	color: #b9a86a;
+	white-space: nowrap;
+	width: 0%;
+	transition: width 0.4s 0.3s;
+}
+
+.valcaris:hover::before {
+	width: 100%;
+}
+
+//head
+.head{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+};
+//titles
+.titles h1, h2{
     display: flex;
     justify-content:center;
-    margin: 1%;
-}
+    margin-top: 14%;
+};
+h2{
+    font-size: 6em;
+    text-decoration-line: underline;
+};
+
 .titles{
     padding-top: 4%;
-}
+};
 .about{
-    font-family: skinny;
-    font-size: 1.3em;
     width: 50%;
     height: auto;
     padding: 1%;
@@ -31,26 +97,85 @@ h1{
     margin-right: auto;
     margin-top: 4%;
     text-align: justify;
+};
+.about:hover{
+    opacity: 0.2;
 }
-.body2{
+
+//body
+.presentation{
     background-color: #f9f9f9;
     width: 100%;
     display: inline-block
+};
+
+.gites{
+    background-color: #E5E5E5;
+    width: 100%;
+    display: inline-block
 }
-.test{
-  
-    width: 20%;
+.first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+};
+.second{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 4%;
+}
+.fayard{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 18%;
+};
+.frene{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    margin-top: 18%;
+}
+.echaillon{
+    background-color: #4a6873;
+     width: 100%;
+    display: inline-block
+}
+
+
+
+.firstParagraph, .secondParagraph{
+    width: 50%;
+    padding: 5%;
+    text-align: justify;
+};
+.descriptionFayard, .descriptionFrene{
+    width: 50%;
+    text-align: justify;
+}
+
+
+//pictures
+.firstPicture{
+    width: 100%;
     height: auto;
     padding: 1%;
     background-color: #4a6873;
     border-radius: 30px;
-    opacity: 0.9;;
     margin-top: 4%;
-}
-p{
-    margin-top: 1%;
-    margin-bottom: 1%
-}
-.test{
-    justify-content: flex-end
+};
+.secondPicture{
+    height: auto;
+    padding: 1%;
+    background-color: #4a6873;
+    border-radius: 30px; 
+};
+.pictureDiv{
+    margin-top: 4%;
+};
+.fayardPicture, .frenePicture{
+    background-color: #4a6873;
+    border-radius: 30px; 
+    padding: 1%;
+    cursor: pointer;
 }

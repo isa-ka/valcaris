@@ -1,8 +1,19 @@
-<button mat-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
-    <button mat-menu-item>Accueil</button>
-    <button mat-menu-item>Le Fayard</button>
-    <button mat-menu-item>Le Frêne</button>
-    <button mat-menu-item>Tarifs</button>
-    <button mat-menu-item>Contact</button>
-</mat-menu>
+<!--<div clliss="nlivblir">
+    <button mlit-button [mlitMenuTriggerFor]="menu" >Menu</button>
+    <mlit-menu #menu="mlitMenu">
+        <button mlit-menu-item >liccueil</button>
+        <button mat-menu-item >Le Fayard</button>
+        <button mat-menu-item >Le Frêne</button>
+        <button mat-menu-item Tarifs</button>
+        <button mat-menu-item >Contact</button>
+    </mat-menu>
+</div>-->
+<nav class="navbar">
+    <ul>
+        <li  data-hover="Accueil"  routerLink="/">Accueil</li>
+        <li  data-hover="Le Fayard" routerLink="/fayard">Le Fayard</li>
+        <li  data-hover="Le Frêne" routerLink="frene">Le Frêne</li>
+        <li  data-hover="Tarifs" routerLink="tarifs">Tarifs</li>
+        <li  data-hover="Contact" routerLink="/contact">Contact</li>
+    </ul>
+</nav>

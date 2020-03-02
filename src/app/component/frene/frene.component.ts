@@ -12,4 +12,5 @@ export class FreneComponent implements OnInit {
   ngOnInit() {
   }
 
+  
 }
