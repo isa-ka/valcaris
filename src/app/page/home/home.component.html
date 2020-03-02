@@ -84,48 +84,42 @@
 </div>
 <div class="gites">
     <h2 >Nos Gîtes</h2>
-    <div class="fayard">
-        <div class="fayardDiv">
-            <img class="fayardPicture" src="/assets/fayard/entree.JPG" alt="entree" routerLink="/fayard">
-        </div>
-        <div class="descriptionFayard">
-            <h1>Le Fayard</h1>
-            <p>
-                Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre propre habitation.
-            </p>
-            Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort nécessaire, tout en
-            conservant
-            le cachet de l’ancien.
-        </div>
-    </div>
-    <div class="frene">
-        <div class  ="freneDiv">
-            <img class="frenePicture" src="/assets/frene/entree.JPG" alt="" routerLink="/frene">
-        </div>
-        <div class="descriptionFrene">
-            <h1>Le Frene</h1>
-            <p>
-            Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre propre habitation.
-            </p>
-            <p>
-            Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort nécessaire, tout en conservant
-            le cachet de l’ancien.
-            </p>
-        </div>
-    </div>
+    <mat-tab-group>
+        <mat-tab label="Le Fayard"> 
+                <div class="fayard">
+                    <div class="fayardDiv">
+                        <img class="fayardPicture" src="/assets/fayard/entree.JPG" alt="entree" routerLink="/fayard">
+                    </div>
+                    <div class="descriptionFayard" routerLink="/fayard">
+                        <h1>Le Fayard</h1>
+                        <p>
+                            Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre propre
+                            habitation.
+                        </p>
+                        Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort nécessaire, tout en
+                        conservant
+                        le cachet de l’ancien.
+                    </div>
+                </div>
+        </mat-tab>
+        <mat-tab label="Le Frène"> 
+            <div class="frene">
+                <div class="freneDiv">
+                    <img class="frenePicture" src="/assets/frene/entree.JPG" alt="" routerLink="/frene">
+                </div>
+                <div class="descriptionFrene" routerLink="/frene">
+                    <h1>Le Frene</h1>
+                    <p>
+                        Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre propre
+                        habitation.
+                    </p>
+                    <p>
+                        Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort nécessaire, tout
+                        en conservant
+                        le cachet de l’ancien.
+                    </p>
+                </div>
+            </div>
+        </mat-tab>
+    </mat-tab-group>
 </div>
-<div class="echaillon">
-    <div class="descriptionEchaillon">
-        <h1>Le Grand Échaillon</h1>
-        <h3>Des professionnels de la montagne vous accompagnent</h3>
-        <p>
-            Pour accompagner toutes vos randonnées en montagne, vos sorties à VTT ou en marche nordique et trouver les meilleurs
-            points de vues pour photographier notre Vercors, faites appel aux professionnels, Étienne, Stéphane, Nicolas et
-            Stéphane.
-        </p>
-        <p>
-            Toutes ces activités peuvent se faire au départ de nos hébergements, accompagné d'un pique-nique si vous le désirez.
-        </p>
-    </div>
-</div>
-

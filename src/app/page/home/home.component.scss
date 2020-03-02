@@ -9,7 +9,7 @@ p{
 };
 .about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .descriptionEchaillon{
     font-size: 1.6em;
-}
+};
 
 //title animation
 .link {
@@ -26,11 +26,11 @@ p{
 	overflow: hidden;
 	line-height: 0.75;
 	color: #424242;
-}
+};
 
 .valcaris:hover {
 	color: #b2b0a9;
-}
+};
 
 .valcaris::after {
 	content: '';
@@ -44,11 +44,11 @@ p{
 	transform: translate3d(-100%,0,0);
 	transition: transform 0.4s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-}
+};
 
 .valcaris:hover::after {
 	transform: translate3d(100%,0,0);
-}
+};
 
 .valcaris::before {
 	content: attr(data-letters);
@@ -59,11 +59,11 @@ p{
 	white-space: nowrap;
 	width: 0%;
 	transition: width 0.4s 0.3s;
-}
+};
 
 .valcaris:hover::before {
 	width: 100%;
-}
+};
 
 //head
 .head{
@@ -72,7 +72,7 @@ p{
     height: 100%;
 };
 //titles
-.titles h1, h2{
+.titles h1{
     display: flex;
     justify-content:center;
     margin-top: 14%;
@@ -80,6 +80,10 @@ p{
 h2{
     font-size: 6em;
     text-decoration-line: underline;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 8%;
+    margin-top: 4%;
 };
 
 .titles{
@@ -91,7 +95,7 @@ h2{
     padding: 1%;
     background-color: #4a6873;
     color: #fcfbf7;
-    border-radius: 30px;
+    border-radius: 10px;
     opacity: 0.9;
     margin-left: auto;
     margin-right: auto;
@@ -108,12 +112,14 @@ h2{
     width: 100%;
     display: inline-block
 };
-
+ .descriptionFayard, .descriptionFrene{
+     cursor: pointer;
+ };
 .gites{
     background-color: #E5E5E5;
     width: 100%;
-    display: inline-block
-}
+    display: inline-block;
+};
 .first{
     display: flex;
     flex-direction: row;
@@ -128,19 +134,15 @@ h2{
 .fayard{
     display: flex;
     justify-content: space-around;
-    margin-top: 18%;
+    margin-top: 8%;
+    flex-direction: row-reverse;
 };
 .frene{
     display: flex;
     justify-content: space-around;
     flex-direction: row-reverse;
-    margin-top: 18%;
-}
-.echaillon{
-    background-color: #4a6873;
-     width: 100%;
-    display: inline-block
-}
+    margin-top: 8%;
+};
 
 
 
@@ -152,7 +154,8 @@ h2{
 .descriptionFayard, .descriptionFrene{
     width: 50%;
     text-align: justify;
-}
+    margin-top: 2%;
+};
 
 
 //pictures
@@ -160,22 +163,20 @@ h2{
     width: 100%;
     height: auto;
     padding: 1%;
-    background-color: #4a6873;
-    border-radius: 30px;
+    border-radius: 10px;
     margin-top: 4%;
 };
 .secondPicture{
     height: auto;
     padding: 1%;
-    background-color: #4a6873;
-    border-radius: 30px; 
+    border-radius: 10px; 
 };
 .pictureDiv{
     margin-top: 4%;
 };
 .fayardPicture, .frenePicture{
-    background-color: #4a6873;
-    border-radius: 30px; 
+    border-radius: 10px; 
     padding: 1%;
     cursor: pointer;
-}
+    margin-bottom: 10%;
+};

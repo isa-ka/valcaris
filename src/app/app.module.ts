@@ -16,6 +16,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { NgxHmCarouselModule } from 'ngx-hm-carousel';
 import 'hammerjs';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
 
 
 
@@ -39,6 +41,8 @@ import 'hammerjs';
     MatButtonModule,
     MDBBootstrapModule.forRoot(),
     NgxHmCarouselModule,
+    MatTabsModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -5,14 +5,16 @@ body {
   margin: 0; 
   font-family: Roboto, "Helvetica Neue", sans-serif; 
   background-color: #f9f9f9; 
-  background-image: url("/assets/t.png");
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   .mat-elevation-z4{
     box-shadow: none;
     background-color: #1fe0;
-}
+};
+.mat-tab-label-content{
+    font-size: 2em !important;
+};
 }
 @font-face{
   font-family: menu;
