@@ -2,14 +2,17 @@
 //common
 p{
     margin-top: 1%;
-    margin-bottom: 1%
+    margin-bottom: 1%;
 };
-.about, .presentation, .gites, .echaillon{
+.about, .presentation, .echaillon, .info{
     font-family: skinny;
 };
 .about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .descriptionEchaillon{
     font-size: 1.6em;
 };
+#all{
+    background-color: #efefef;
+}
 
 //title animation
 .link {
@@ -70,6 +73,7 @@ p{
     display: flex;
     flex-direction: column;
     height: 100%;
+    margin-bottom: 10%;
 };
 //titles
 .titles h1{
@@ -77,6 +81,9 @@ p{
     justify-content:center;
     margin-top: 14%;
 };
+h1{
+    font-size: 2.8em;
+}
 h2{
     font-size: 6em;
     text-decoration-line: underline;
@@ -84,6 +91,7 @@ h2{
     justify-content:center;
     margin-bottom: 8%;
     margin-top: 4%;
+    font-family: skinny;
 };
 
 .titles{
@@ -94,7 +102,7 @@ h2{
     height: auto;
     padding: 1%;
     background-color: #4a6873;
-    color: #fcfbf7;
+    color: #eae4e4;
     border-radius: 10px;
     opacity: 0.9;
     margin-left: auto;
@@ -108,47 +116,55 @@ h2{
 
 //body
 .presentation{
-    background-color: #f9f9f9;
+    background-color: #d6d2d2;
     width: 100%;
     display: inline-block
 };
  .descriptionFayard, .descriptionFrene{
      cursor: pointer;
  };
+ .descriptionFayard p, .descriptionFrene p{
+      font-size: 1.2em;
+ }
 .gites{
     background-color: #E5E5E5;
     width: 100%;
     display: inline-block;
+    padding-bottom: 10%;
+    height: 100%;
 };
-.first{
+.first, .second{
+    font-size: 1.2em;
+    width: 80%;
+    margin: 0 auto;
+    align-items: flex-start;
     display: flex;
+    justify-content: space-between;
+}
+.first{
     flex-direction: row;
-    justify-content: space-around;
     flex-direction: row-reverse;
 };
 .second{
-    display: flex;
-    justify-content: space-around;
-    margin-top: 4%;
+    margin-top: 4%; 
 }
-.fayard{
+.fayard,.frene{
     display: flex;
-    justify-content: space-around;
-    margin-top: 8%;
+    justify-content: space-between;
+    margin-top: 4%;
     flex-direction: row-reverse;
 };
-.frene{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row-reverse;
-    margin-top: 8%;
-};
-
+.info{
+    font-size: 4em;
+    position: absolute;
+    bottom: 50%;
+    left: 30%;
+}
 
 
 .firstParagraph, .secondParagraph{
-    width: 50%;
-    padding: 5%;
+    width: 60%;
+    padding-top: 5%;
     text-align: justify;
 };
 .descriptionFayard, .descriptionFrene{
@@ -164,19 +180,20 @@ h2{
     height: auto;
     padding: 1%;
     border-radius: 10px;
-    margin-top: 4%;
+    margin-top: 20%;
+    box-shadow: 1px 1px #4a6873, 24px -11px 17px #4a6873;
 };
 .secondPicture{
     height: auto;
     padding: 1%;
     border-radius: 10px; 
+    margin-top: 20%;
+    box-shadow: 1px 1px #4a6873, -24px -11px 17px #4a6873;
 };
 .pictureDiv{
     margin-top: 4%;
 };
 .fayardPicture, .frenePicture{
-    border-radius: 10px; 
-    padding: 1%;
     cursor: pointer;
-    margin-bottom: 10%;
+    margin-top: 10%;
 };

@@ -13,14 +13,21 @@ body {
     background-color: #1fe0;
 };
 .mat-tab-label-content{
-    font-size: 2em !important;
+    font-size: 2.8em; 
+    font-family: skinny;
+    padding-bottom: 6%;
+};
+.mat-tab-group{
+  font-family: skinny;
+  width: 80%;
+  margin: 0 auto;
 };
 }
 @font-face{
   font-family: menu;
   src: url(fonts/anugrah/Anugrah.ttf) format("opentype")
-}
+};
 @font-face{
   font-family: skinny;
   src: url(fonts/vertigo/VertigoFLF-Bold.ttf) format("opentype")
-}
+};

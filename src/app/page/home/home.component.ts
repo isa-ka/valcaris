@@ -22,13 +22,14 @@ import { HomeService } from "src/app/home.service";
 })
 export class HomeComponent implements OnInit {
   state = 'hide'
-  isShown: boolean = false
   scrollPosition: number = window.pageYOffset;
 
-  constructor(public el: ElementRef) { }
+
+  constructor(public el: ElementRef, private homeService:HomeService) { }
 
   ngOnInit() {
   }
+
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
@@ -39,6 +40,12 @@ export class HomeComponent implements OnInit {
     else {
       this.state = 'hide'
     }; 
-  } 
+  };
+  onMouseEnter(){
+    this.homeService.onMouseEnter();
+  }
+  onMouseLeave(){
+    this.homeService.onMouseLeave();
+  }
 
 }
