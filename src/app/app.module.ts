@@ -16,6 +16,7 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselComponent } from './component/carousel/carousel.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -42,6 +43,7 @@ import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
     MDBBootstrapModule.forRoot(),
     MatTabsModule,
     MatGridListModule,
+    MatIconModule,
 
   ],
   providers: [],

@@ -1,4 +1,7 @@
-.navbar  li{
+.mobileVersion{
+    display: none;
+}
+nav  li{
 	color: rgba(0,0,0,0.2);
 	font-weight: 700;
     text-shadow: none;
@@ -6,19 +9,19 @@
     list-style-type: none;
 };
 
-.navbar li::before {
+nav li::before {
 	color: black;
 	content: attr(data-hover);
 	position: absolute;
 	transition: transform 0.3s, opacity 0.3s;
 };
 
-.navbar li:hover::before,
-.navbar li:focus::before {
+nav li:hover::before,
+nav li:focus::before {
 	transform: scale(0.9);
 	opacity: 0;
 };
-.navbar{
+nav{
     display: block;
 };
 li{
@@ -32,3 +35,17 @@ ul{
     align-content: space-around;
 };
 
+@media (max-width : 800px){
+    nav{
+        display: none;
+    }
+    .mobileVersion{
+        display: block;
+        position: absolute;
+    }
+}
+@media screen, print,(max-width: 300){
+    .mobileVersion{
+        width: auto;
+    }
+}

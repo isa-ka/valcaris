@@ -6,7 +6,7 @@ p{
 .about, .presentation, .echaillon, .info{
     font-family: skinny;
 };
-.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .descriptionEchaillon{
+.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .infoMedia{
     font-size: 1.6em;
 };
 #all{
@@ -20,17 +20,19 @@ p{
 	font-size: 4em;
 	color: #9e9ba4;
 	display: inline-block;
-};
+}
 .valcaris {
 	text-transform: uppercase;
 	font-weight: 900;
-	overflow: hidden;
-	line-height: 0.75;
+    overflow: hidden;
+    line-height: 0.75;
 	color: #424242;
-};
+}
+
 .valcaris:hover {
 	color: #b2b0a9;
-};
+}
+
 .valcaris::after {
 	content: '';
 	position: absolute;
@@ -43,10 +45,11 @@ p{
 	transform: translate3d(-100%,0,0);
 	transition: transform 0.4s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-};
+}
+
 .valcaris:hover::after {
 	transform: translate3d(100%,0,0);
-};
+}
 
 .valcaris::before {
 	content: attr(data-letters);
@@ -57,12 +60,21 @@ p{
 	white-space: nowrap;
 	width: 0%;
 	transition: width 0.4s 0.3s;
-};
+}
 
 .valcaris:hover::before {
 	width: 100%;
 };
-
+#mediaTitle{
+    text-transform: uppercase;
+	font-weight: 900;
+	overflow: hidden;
+    color: #424242;
+    display: flex;
+    justify-content:center;
+    margin-top: 14%;
+    font-size: 8em
+}
 //head
 .head{
     display: flex;
@@ -71,13 +83,11 @@ p{
     margin-bottom: 10%;
 };
 //titles
-.titles h1{
+.title h1{
     display: flex;
     justify-content:center;
     margin-top: 14%;
-};
-h1{
-    font-size: 2.8em;
+    font-size: 12em;
 };
 h2{
     font-size: 6em;
@@ -88,7 +98,7 @@ h2{
     margin-top: 4%;
     font-family: skinny;
 };
-.titles{
+.title{
     padding-top: 4%;
 };
 .about{
@@ -98,16 +108,11 @@ h2{
     background-color: #4a6873;
     color: #eae4e4;
     border-radius: 10px;
-    opacity: 0.9;
     margin-left: auto;
     margin-right: auto;
     margin-top: 4%;
     text-align: justify;
 };
-.about:hover{
-    opacity: 0.2;
-};
-
 //body
 .presentation{
     background-color: #d6d2d2;
@@ -117,7 +122,7 @@ h2{
  .descriptionFayard, .descriptionFrene{
      cursor: pointer;
  };
- .descriptionFayard p, .descriptionFrene p{
+ .descriptionFayard p, .descriptionFrene p,.first, .second{
       font-size: 1.2em;
  };
 .gites{
@@ -128,7 +133,6 @@ h2{
     height: 100%;
 };
 .first, .second{
-    font-size: 1.2em;
     width: 80%;
     margin: 0 auto;
     align-items: flex-start;
@@ -164,6 +168,9 @@ h2{
     text-align: justify;
     margin-top: 2%;
 };
+.infoMedia{
+    opacity: 0;
+}
 //pictures
 .firstPicture, .secondPicture{
     height: auto;
@@ -185,3 +192,62 @@ h2{
     cursor: pointer;
     margin-top: 10%;
 };
+.mat-tab-group{
+    font-family: skinny!important;
+    width: 80%!important;
+    margin: 0 auto!important;
+};
+
+
+//media queries
+@media (max-width: 1680px){
+    .first, .second{
+        width: 90%;
+    };
+    .mat-tab-group{
+       width:  90%!important;
+    };
+};
+
+@media (max-width :1470px){
+   .first,.second{
+       flex-direction: column;
+       align-items: center;
+       width: 50%;  
+   };
+   .firstParagraph, .secondParagraph{
+        width: 80%;
+        padding-top: 5%;
+        text-align: left;
+        font-size: 1.2em;
+    };
+    .fayard,.frene{
+        align-items: center;
+        margin-top: 4%;
+        flex-direction: column-reverse;
+    };
+    .mat-tab-group{
+        align-items: center;
+        font-size: 0.8em !important;
+    };
+    .infoMedia{
+        opacity: 1;
+        text-align: center;
+    };
+};
+@media (max-width: 990px){
+    .about{
+        width: 80%;
+    };
+}
+@media screen, (max-width: 690 px){
+    #mediaTitle {
+        font-size: 4em;
+    }
+}
+@media screen,(max-width: 300){
+    .presentation{
+        width: auto;
+    };
+ 
+}

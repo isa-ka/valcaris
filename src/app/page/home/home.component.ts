@@ -23,11 +23,13 @@ import { HomeService } from "src/app/home.service";
 export class HomeComponent implements OnInit {
   state = 'hide'
   scrollPosition: number = window.pageYOffset;
-
-
+  innerWidth : number;
+  desktopSize : boolean = true;
+  mobileSize: boolean = false;
   constructor(public el: ElementRef, private homeService:HomeService) { }
 
   ngOnInit() {
+    this.onResize();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -43,9 +45,21 @@ export class HomeComponent implements OnInit {
   };
   onMouseEnter(){
     this.homeService.onMouseEnter();
-  }
+  };
   onMouseLeave(){
     this.homeService.onMouseLeave();
-  }
+  };
 
+  @HostListener("window:resize", ['$event'])
+
+  onResize(){
+    this.innerWidth = window.innerWidth;
+    if (innerWidth <= 990 ) {
+      this.desktopSize = false;
+      this.mobileSize = true;      
+    }else{
+      this.desktopSize = true;
+      this.mobileSize = false;
+    }
+  }
 }

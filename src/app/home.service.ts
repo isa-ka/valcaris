@@ -1,4 +1,4 @@
-import { Injectable, Component } from '@angular/core';
+import { Injectable, Component, HostListener } from '@angular/core';
 
 
 @Injectable({
@@ -9,7 +9,8 @@ import { Injectable, Component } from '@angular/core';
 export class HomeService {
   showInfo: boolean = false;
   changeOfState: number;
-
+  innerWidth: number;
+  screenSize: boolean = true;
   constructor() { }
 
   onMouseEnter() {
@@ -17,8 +18,6 @@ export class HomeService {
     this.changeOfState = 0.2;
     console.log(this.showInfo)
   };
-
-
   onMouseLeave() {
     this.showInfo = false;
     this.changeOfState = 1;

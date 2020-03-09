@@ -1,9 +1,10 @@
 <div id="all">
     <div class="head">   
         <div class="home">
-            <div class="titles">
-                <h1><a class="link valcaris" href="/" data-letters="valcaris">valcaris</a></h1>
+            <div class="title" *ngIf="desktopSize">
+                <h1><a class="valcaris" href="/" data-letters="valcaris">valcaris</a></h1>
             </div>
+                <div id="mediaTitle" *ngIf="mobileSize">Valcaris</div>
             <div class="about" [@scrollAnimation]="state">
                 <p> 
                     Les Gîtes VALCARIS se situent au cœur des Balcons sud du Vercors, au sein du Parc Naturel Régional du Vercors.
@@ -55,7 +56,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="info" *ngIf="homeService.showInfo">
+                <div class="info" *ngIf="homeService.showInfo" routerLink="/fayard">
+                    Cliquez pour plus d'information !
+                </div>
+                <div class="infoMedia" routerLink="/fayard">
                     Cliquez pour plus d'information !
                 </div>
             </mat-tab>
@@ -80,7 +84,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="info" *ngIf="homeService.showInfo">
+                <div class="info" *ngIf="homeService.showInfo" routerLink="/frene">
+                    Cliquez pour plus d'information !
+                </div>
+                <div class="infoMedia" >
                     Cliquez pour plus d'information !
                 </div>
             </mat-tab>
@@ -88,7 +95,7 @@
     </div>
     <div class="presentation">
         <div class="first">
-            <div>
+            <div class="pictureDiv">
                 <img class="firstPicture" src="/assets/firstPicture.jpg" alt="montagne">
             </div>
             <div class="firstParagraph">

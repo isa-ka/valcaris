@@ -1,4 +1,4 @@
-<nav class="navbar">
+<nav>
     <ul>
         <li  data-hover="Accueil"  routerLink="/">Accueil</li>
         <li  data-hover="Le Fayard" routerLink="/fayard">Le Fayard</li>
@@ -7,3 +7,25 @@
         <li  data-hover="Contact" routerLink="/contact">Contact</li>
     </ul>
 </nav>
+<div class="mobileVersion">
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span>Accueil</span>
+        </button>
+        <button mat-menu-item>
+            <span>Le Fayard</span>
+        </button>
+        <button mat-menu-item>
+            <span>Le Frêne</span>
+        </button>
+        <button mat-menu-item>
+            <span>Tarif</span>
+        </button>
+        <button mat-menu-item>
+            <span>Contact</span>
+        </button>
+    </mat-menu>
+</div>
