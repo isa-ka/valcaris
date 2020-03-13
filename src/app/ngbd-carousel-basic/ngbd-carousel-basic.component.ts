@@ -8,8 +8,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NgbdCarouselBasicComponent implements OnInit {
   assets = [1, 2, 3, 4, 5, 6, 7].map((i) => `/assets/frene/frene${i}.jpg`);
-  fayard = [1, 2, 3, 4, 5, 6, 7].map((i) => `/assets/fayard/fayard${i}.jpg`);
- 
+
   constructor(config: NgbCarouselConfig) {
     config.wrap = false;
     config.keyboard = false;

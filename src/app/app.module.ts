@@ -13,7 +13,6 @@ import { ContactComponent } from './component/contact/contact.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { CarouselComponent } from './component/carousel/carousel.component';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
@@ -31,7 +30,6 @@ import { NgbdCarouselBasicModule } from "./ngbd-carousel-basic/carousel-basic.mo
     FayardComponent,
     FreneComponent,
     ContactComponent,
-    CarouselComponent,
   ],
   imports: [
     BrowserModule,

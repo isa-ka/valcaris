@@ -197,7 +197,34 @@ h2{
     width: 80%!important;
     margin: 0 auto!important;
 };
-
+//carousel
+.carousel {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+}
+.arrow{
+    text-align: center;
+}
+.fa-angle-down{
+    font-size: 200px;
+}
+.arrow i { 
+    margin-top: 8%;
+    animation-duration: 8s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+  from {margin-top: 8%; opacity: 0;}
+    20%{margin-top: 8%; opacity: 0;}
+    30%{margin-top: 8%}
+    40%{margin-top: 16%; opacity: 1;}
+    50%{margin-top: 8% }
+    60%{margin-top: 16%}
+    70%{margin-top: 8%}
+  to {margin-top: 16%; opacity:0;}
+}
 
 //media queries
 @media (max-width: 1680px){

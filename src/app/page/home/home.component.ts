@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { HomeService } from "src/app/home.service";
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -26,8 +27,18 @@ export class HomeComponent implements OnInit {
   innerWidth : number;
   desktopSize : boolean = true;
   mobileSize: boolean = false;
-  constructor(public el: ElementRef, private homeService:HomeService) { }
+  random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => `/assets/random/random${i}.jpg`);
 
+  
+  constructor(public el: ElementRef, private homeService: HomeService, config: NgbCarouselConfig) {
+    config.interval = 1000;
+    config.wrap = true;
+    config.keyboard = true;
+    config.pauseOnHover = true;
+   }
+
+   
+  
   ngOnInit() {
     this.onResize();
   }
