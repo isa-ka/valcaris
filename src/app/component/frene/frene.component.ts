@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { interval } from 'rxjs';
+
 
 
 @Component({
@@ -20,15 +20,16 @@ import { interval } from 'rxjs';
     ]
   })
 export class FreneComponent implements OnInit {
-isShown:boolean
-interval :any;
-speed: number = 2000;
+  isShown:boolean
+  interval :any;
+  speed: number = 2000;
   private stateGrow: string = "inactive"; 
   constructor( ) { }
 
   ngOnInit() {
     this.isShown= false;
   }
+  
 
 }
 
