@@ -1,16 +1,27 @@
 .tarif{
-    margin-top: 8%;
     width: 100%;
     display: flex;
-    justify-content: center
-}
+    justify-content: center;
+    background-color: #efefef;
+    height: 100%;
+};
 
 mat-tab-group{
     width: 60%;
-
-}
+    margin-top: 10%;
+};
 .mat-elevation-z8{
     margin-top: 8%;
     margin-left: 4%;
     width: 80%;
-}
+};
+.mat-header-cell{
+    color: black;
+    font-size: 2em;
+    font-family: skinny;
+};
+.mat-cell{
+    font-family: skinny;
+    font-size: 1.6em;
+    color: #673ab7;
+};
