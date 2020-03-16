@@ -1,4 +1,4 @@
-<nav>
+<nav id="up">
     <ul>
         <li  data-hover="Accueil"  routerLink="/">Accueil</li>
         <li  data-hover="Le Fayard" routerLink="/fayard">Le Fayard</li>
@@ -7,6 +7,11 @@
         <li  data-hover="Contact" routerLink="/contact">Contact</li>
     </ul>
 </nav>
+<div class="up" *ngIf="upArrow">
+    <a href="#up">
+        <mat-icon aria-hidden="false" aria-label="Example home icon">arrow_upward</mat-icon>
+    </a>
+</div>
 <div class="mobileVersion">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>menu</mat-icon>

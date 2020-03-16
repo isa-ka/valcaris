@@ -1,6 +1,6 @@
 .mobileVersion{
     display: none;
-}
+};
 nav  li{
 	color: rgba(0,0,0,0.2);
 	font-weight: 700;
@@ -21,8 +21,20 @@ nav li:focus::before {
 	transform: scale(0.9);
 	opacity: 0;
 };
+.up{
+    position: fixed;
+    top:20;
+    bottom:0;
+    right: 0;
+    margin-right: 4%
+};
+mat-icon {
+  font-size: 60px;
+  color: #4a6873;
+};
 nav{
     display: block;
+    
 };
 li{
     font-family: skinny;
@@ -38,14 +50,14 @@ ul{
 @media (max-width : 800px){
     nav{
         display: none;
-    }
+    };
     .mobileVersion{
         display: block;
         position: absolute;
-    }
-}
+    };
+};
 @media screen, print,(max-width: 300){
     .mobileVersion{
         width: auto;
-    }
-}
+    };
+};

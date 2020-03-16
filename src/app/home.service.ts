@@ -13,6 +13,7 @@ export class HomeService {
   screenSize: boolean = true;
   constructor() { }
 
+
   onMouseEnter() {
     this.showInfo = true;
     this.changeOfState = 0.2;
