@@ -9,7 +9,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 export class FayardComponent implements OnInit {
   fayard = [1, 2, 3, 4, 5, 6,  8, 9,11].map((i) => `/assets/fayard/fayard${i}.jpg`);
 
-  constructor(config: NgbCarouselConfig) {
+ constructor(config: NgbCarouselConfig) {
     config.wrap = false;
     config.keyboard = false;
     config.pauseOnHover = false;

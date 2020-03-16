@@ -6,7 +6,7 @@ p{
 .about, .presentation, .echaillon, .info{
     font-family: skinny;
 };
-.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .infoMedia{
+.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene{
     font-size: 1.6em;
 };
 #all{
@@ -24,13 +24,13 @@ p{
 .valcaris {
 	text-transform: uppercase;
 	font-weight: 900;
-    overflow: hidden;
-    line-height: 0.75;
+	overflow: hidden;
+	line-height: 0.75;
 	color: #424242;
 }
 
 .valcaris:hover {
-	color: #b2b0a9;
+	color: #b9a86a;
 }
 
 .valcaris::after {
@@ -64,7 +64,7 @@ p{
 
 .valcaris:hover::before {
 	width: 100%;
-};
+}
 #mediaTitle{
     text-transform: uppercase;
 	font-weight: 900;
@@ -156,7 +156,6 @@ h2{
     font-size: 4em;
     position: absolute;
     bottom: 50%;
-    left: 30%;
 };
 .firstParagraph, .secondParagraph{
     width: 60%;
@@ -179,7 +178,7 @@ h2{
     margin-top: 20%;
 }
 .firstPicture{
-    width: 100%;
+  //  width: 100%;
     box-shadow: 1px 1px #4a6873, 24px -11px 17px #4a6873;
 };
 .secondPicture{
@@ -190,6 +189,7 @@ h2{
 };
 .fayardPicture, .frenePicture{
     cursor: pointer;
+    margin-left: 4%;
     margin-top: 10%;
 };
 .mat-tab-group{
@@ -213,11 +213,11 @@ h2{
 .arrow i { 
     margin-top: 8%;
     animation-duration: 8s;
-    animation-name: slidein;
+    animation-name: scroll;
 }
-@keyframes slidein {
+@keyframes scroll {
   from {margin-top: 8%; opacity: 0;}
-    20%{margin-top: 8%; opacity: 0;}
+    20%{margin-top: 8%; opacity: 0.2;}
     30%{margin-top: 8%}
     40%{margin-top: 16%; opacity: 1;}
     50%{margin-top: 8% }
@@ -234,16 +234,19 @@ h2{
     .mat-tab-group{
        width:  90%!important;
     };
+    .info{
+    bottom: 70%;
+    left: 30%;
+    }
 };
 
 @media (max-width :1470px){
    .first,.second{
        flex-direction: column;
        align-items: center;
-       width: 50%;  
+       width: 80%;  
    };
    .firstParagraph, .secondParagraph{
-        width: 80%;
         padding-top: 5%;
         text-align: left;
         font-size: 1.2em;
@@ -257,14 +260,20 @@ h2{
         align-items: center;
         font-size: 0.8em !important;
     };
-    .infoMedia{
-        opacity: 1;
-        text-align: center;
-    };
+    .fayardPicture, .frenePicture{
+        margin-left: 0;
+    }
 };
 @media (max-width: 990px){
     .about{
         width: 80%;
+    };
+    .info{
+        opacity: 0;
+    }
+    .infoMedia{
+        opacity: 1;
+        text-align: center;
     };
 }
 @media screen, (max-width: 690 px){
