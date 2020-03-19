@@ -1,5 +1,23 @@
 .carousel {
-    margin-top: 8%;
+    margin-top: 4%;
     display: flex;
     justify-content: center;
-}
+};
+.carousel .carousel-control-next-icon{
+        background-size: 50px;
+};
+span{
+     text-decoration: underline
+};
+.firstPara{
+    width: 60%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+        font-family: skinny;
+    font-size: 1.4em;
+};
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+};

@@ -31,16 +31,17 @@ export class HomeComponent implements OnInit {
 
   
   constructor(public el: ElementRef, private homeService: HomeService, config: NgbCarouselConfig) {
-    config.interval = 1000;
+    config.interval = 2000;
     config.wrap = true;
     config.keyboard = true;
-    config.pauseOnHover = true;
+    config.pauseOnHover = false;
    }
 
    
   
   ngOnInit() {
     this.onResize();
+  
   }
 
   @HostListener('window:scroll', ['$event'])
