@@ -1,4 +1,19 @@
 .test {
     display: flex;
     justify-content: center;
-}
+};
+span{
+     text-decoration: underline
+};
+.firstPara{
+    width: 60%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+        font-family: skinny;
+    font-size: 1.4em;
+};
+.description{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+};
