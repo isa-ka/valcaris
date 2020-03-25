@@ -36,7 +36,7 @@
         <mat-tab-group>
             <mat-tab label="Le Fayard">
                 <div class="fayard" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-                    <div class="fayardDiv">
+                    <div class="fayardDiv" *ngIf="desktopSize">
                         <img class="fayardPicture" src="/assets/fayard/entree.jpg" alt="entree" routerLink="/fayard">
                     </div>
                     <div class="descriptionFayard" routerLink="/fayard" [style.opacity]="homeService.changeOfState">
@@ -67,7 +67,7 @@
             <mat-tab label="Le Frène">
                 <div class="frene" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
                     <div class="freneDiv">
-                        <img class="frenePicture" src="/assets/frene/entree.jpg" alt="" routerLink="/frene">
+                        <img class="frenePicture" src="/assets/frene/entree.jpg" alt="" routerLink="/frene" *ngIf="desktopSize">
                     </div>
                     <div class="descriptionFrene" routerLink="/frene" [style.opacity]="homeService.changeOfState">
                         <h1>Le Frene</h1>
@@ -96,7 +96,7 @@
     </div>
     <div class="presentation">
         <div class="first">
-            <div class="pictureDiv">
+            <div class="pictureDiv" *ngIf="desktopSize">
                 <img class="firstPicture" src="/assets/firstPicture.jpg" alt="montagne">
             </div>
             <div class="firstParagraph">
@@ -118,7 +118,7 @@
         </div>
         <div class="second"> 
             <div class="pictureDiv">
-                <img class="secondPicture" src="/assets/secondPicture.jpg" alt="forest">
+                <img class="secondPicture" src="/assets/secondPicture.jpg" alt="forest" *ngIf="desktopSize">
             </div>   
             <div class="secondParagraph">
                 <p>

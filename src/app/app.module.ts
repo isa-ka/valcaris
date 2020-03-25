@@ -17,7 +17,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdCarouselBasicModule } from "./ngbd-carousel-basic/carousel-basic.module";
+import { NgbdCarouselBasicModule } from "./component/ngbd-carousel-basic/carousel-basic.module";
 import { MatTableModule } from '@angular/material/table';
 
 

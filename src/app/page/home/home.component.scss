@@ -28,11 +28,9 @@ p{
 	line-height: 0.75;
 	color: #424242;
 };
-
 .valcaris:hover {
 	color: #b9a86a;
 };
-
 .valcaris::after {
 	content: '';
 	position: absolute;
@@ -46,11 +44,9 @@ p{
 	transition: transform 0.4s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
 };
-
 .valcaris:hover::after {
 	transform: translate3d(100%,0,0);
 };
-
 .valcaris::before {
 	content: attr(data-letters);
 	position: absolute;
@@ -61,7 +57,6 @@ p{
 	width: 0%;
 	transition: width 0.4s 0.3s;
 };
-
 .valcaris:hover::before {
 	width: 100%;
 };
@@ -74,6 +69,30 @@ p{
     justify-content:center;
     margin-top: 14%;
     font-size: 8em
+};
+//arrow animation
+.arrow{
+    text-align: center;
+    height: 120px;
+};
+.fa-angle-down{
+    font-size: 200px;
+};
+.arrow i { 
+    margin-top: 6%;
+    animation-duration: 8s;
+    animation-name: scroll;
+    opacity: 0;
+};
+@keyframes scroll {
+  from {margin-top: 8%; opacity: 0;}
+    20%{margin-top: 12%; opacity: 0.4;}
+    30%{margin-top: 8%}
+    40%{margin-top: 12%; opacity: 1;}
+    50%{margin-top: 8% }
+    60%{margin-top: 12%}
+    70%{margin-top: 8%}
+  to {margin-top: 12%; opacity:0;}
 };
 //head
 #head{
@@ -207,30 +226,7 @@ h2{
 ngb-carousel{
     display: flex;
     text-align: center;
-}
-.arrow{
-    text-align: center;
 };
-.fa-angle-down{
-    font-size: 200px;
-};
-.arrow i { 
-    margin-top: 6%;
-    animation-duration: 8s;
-    animation-name: scroll;
-    opacity: 0;
-};
-@keyframes scroll {
-  from {margin-top: 8%; opacity: 0;}
-    20%{margin-top: 8%; opacity: 0.4;}
-    30%{margin-top: 8%}
-    40%{margin-top: 12%; opacity: 1;}
-    50%{margin-top: 8% }
-    60%{margin-top: 12%}
-    70%{margin-top: 8%}
-  to {margin-top: 12%; opacity:0;}
-};
-
 //media queries
 @media (max-width: 1680px){
     .first, .second{
@@ -242,9 +238,8 @@ ngb-carousel{
     .info{
     bottom: 70%;
     left: 30%;
-    }
+    };
 };
-
 @media (max-width :1470px){
    .first,.second{
        flex-direction: column;
@@ -280,6 +275,12 @@ ngb-carousel{
         opacity: 1;
         text-align: center;
     };
+    .carousel{
+        display: none;
+    };
+    .arrow{
+        display: none;
+    }
 };
 @media screen, (max-width: 690 px){
     #mediaTitle {
@@ -290,5 +291,4 @@ ngb-carousel{
     .presentation{
         width: auto;
     };
- 
 };

@@ -15,8 +15,6 @@ export class FayardComponent implements OnInit {
     config.keyboard = true;
     config.pauseOnHover = false;
   }
-
-
   ngOnInit() {
   }
 

@@ -8,14 +8,12 @@ nav  li{
     text-decoration: none;
     list-style-type: none;
 };
-
 nav li::before {
 	color: black;
 	content: attr(data-hover);
 	position: absolute;
 	transition: transform 0.3s, opacity 0.3s;
 };
-
 nav li:hover::before,
 nav li:focus::before {
 	transform: scale(0.9);
@@ -29,12 +27,15 @@ nav li:focus::before {
     margin-right: 4%
 };
 mat-icon {
-  font-size: 60px;
-  color: #4a6873;
+    color: #4a6873;
+    border: solid;
+    border-radius: 100%;
+    height: auto;
+    width: auto;
 };
 nav{
     display: block;
-    
+    margin-top: 1%;
 };
 li{
     font-family: skinny;
@@ -46,7 +47,6 @@ ul{
     justify-content: space-around;
     align-content: space-around;
 };
-
 @media (max-width : 800px){
     nav{
         display: none;

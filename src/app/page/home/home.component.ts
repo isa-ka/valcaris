@@ -36,12 +36,8 @@ export class HomeComponent implements OnInit {
     config.keyboard = true;
     config.pauseOnHover = false;
    }
-
-   
-  
   ngOnInit() {
     this.onResize();
-  
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -72,6 +68,6 @@ export class HomeComponent implements OnInit {
     }else{
       this.desktopSize = true;
       this.mobileSize = false;
-    }
-  }
-}
+    };
+  };
+};

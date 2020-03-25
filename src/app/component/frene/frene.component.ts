@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-
-
+import { trigger, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-frene',
@@ -20,14 +18,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ]
   })
 export class FreneComponent implements OnInit {
-  isShown:boolean
+  isShown:boolean;
   interval :any;
   speed: number = 2000;
-  private stateGrow: string = "inactive"; 
   constructor( ) { }
 
   ngOnInit() {
-    this.isShown= false;
+    this.isShown = false;
   }
   
 
