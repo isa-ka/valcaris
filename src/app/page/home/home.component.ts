@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   innerWidth : number;
   desktopSize : boolean = true;
   mobileSize: boolean = false;
-  random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((i) => `/assets/random/random${i}.jpg`);
+  random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((i) => `/assets/random/random${i}.jpg`);
   mode: 'determinate';
 
   
