@@ -146,9 +146,7 @@ h2{
  .descriptionFayard, .descriptionFrene{
      cursor: pointer;
 };
- .descriptionFayard p, .descriptionFrene p,.first, .second{
-      font-size: 1.2em;
-};
+
 .gites{
     background-color: #E5E5E5;
     width: 100%;
@@ -228,6 +226,7 @@ h2{
     width: 80%;
     margin-left: 10%;
 };
+
 ngb-carousel{
     display: flex;
     text-align: center;
@@ -287,13 +286,19 @@ ngb-carousel{
         display: none;
     }
 };
-@media screen, (max-width: 690 px){
+@media (max-width: 690px){
     #mediaTitle {
         font-size: 4em;
     };
 };
-@media screen,(max-width: 300){
-    .presentation{
-        width: auto;
+@media (max-width: 400px){
+    .about, .firstParagraph, .secondParagraph{
+        font-size: 1.2em;
     };
-};
+    .descriptionFayard, .descriptionFrene{
+        font-size: 1.2em;
+    }
+    h1, h2{
+        font-size: 1.6em;
+    }
+}

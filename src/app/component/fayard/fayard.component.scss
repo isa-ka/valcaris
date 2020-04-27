@@ -23,5 +23,16 @@ span{
     display: flex;
     justify-content: center;
     background-color: #efefef;
-
 };
+@media (max-width: 400px){
+    .description{
+        padding-top: 24%;
+    };
+    .carousel{
+        max-width: 160;
+        max-height: 200px;
+    };
+    .carousel{
+        display: none;
+    }
+}
