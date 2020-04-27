@@ -7,7 +7,7 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./fayard.component.scss']
 })
 export class FayardComponent implements OnInit {
-  fayard = [1, 2, 3, 4, 5, 6,  8, 9,11].map((i) => `/assets/fayard/fayard${i}.jpg`);
+  fayard = [1, 2, 3, 4, 5, 6, 7].map((i) => `/assets/fayard/fayard${i}.jpg`);
 
  constructor(config: NgbCarouselConfig) {
     config.interval = 2000;

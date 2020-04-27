@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, style, transition, animate } from '@angular/animations';
+import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-frene',
@@ -18,13 +19,19 @@ import { trigger, style, transition, animate } from '@angular/animations';
     ]
   })
 export class FreneComponent implements OnInit {
+    assets = [1, 2, 3, 4, 5, 6, 7].map((i) => `/assets/frene/frene${i}.jpg`);
+
+  constructor(config: NgbCarouselConfig) {
+    config.interval = 2000;
+    config.wrap = true;
+    config.keyboard = true;
+    config.pauseOnHover = false;
+  }
   isShown:boolean;
   interval :any;
   speed: number = 2000;
-  constructor( ) { }
 
   ngOnInit() {
-    this.isShown = false;
   }
   
 

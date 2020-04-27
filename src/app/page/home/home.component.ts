@@ -55,11 +55,6 @@ export class HomeComponent implements OnInit {
     }; 
 
 
-    if (scrollPosition >= this.scrollPosition + 5) {
-      this.scrollPosition += scrollPosition;
-      console.log(this.scrollPosition)
-      this.value += 8;
-    }
  
 
     //console.log(this.value)
