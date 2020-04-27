@@ -7,10 +7,10 @@ import { Injectable, Component, HostListener } from '@angular/core';
 
 
 export class HomeService {
-  showInfo: boolean = false;
-  changeOfState: number;
-  innerWidth: number;
-  screenSize: boolean = true;
+  public showInfo: boolean = false;
+  public changeOfState: number;
+  public innerWidth: number;
+  public screenSize: boolean = true;
   constructor() { }
 
 

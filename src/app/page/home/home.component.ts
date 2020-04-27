@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { trigger, state, style, animate, transition, animation } from '@angular/animations';
 import { HomeService } from "src/app/home.service";
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -27,10 +28,11 @@ export class HomeComponent implements OnInit {
   innerWidth : number;
   desktopSize : boolean = true;
   mobileSize: boolean = false;
-  random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((i) => `/assets/random/random${i}.jpg`);
+  random = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14].map((i) => `/assets/random/random${i}.jpg`);
+  mode: 'determinate';
 
   
-  constructor(public el: ElementRef, private homeService: HomeService, config: NgbCarouselConfig) {
+  constructor(public el: ElementRef, public homeService: HomeService, config: NgbCarouselConfig) {
     config.interval = 2000;
     config.wrap = true;
     config.keyboard = true;
@@ -44,12 +46,23 @@ export class HomeComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset
+    //console.log(scrollPosition)
     if (scrollPosition >= componentPosition) {
       this.state = 'show';
     }
     else {
       this.state = 'hide'
     }; 
+
+
+    if (scrollPosition >= this.scrollPosition + 5) {
+      this.scrollPosition += scrollPosition;
+      console.log(this.scrollPosition)
+      this.value += 8;
+    }
+ 
+
+    //console.log(this.value)
   };
   onMouseEnter(){
     this.homeService.onMouseEnter();
@@ -70,4 +83,5 @@ export class HomeComponent implements OnInit {
       this.mobileSize = false;
     };
   };
+
 };
