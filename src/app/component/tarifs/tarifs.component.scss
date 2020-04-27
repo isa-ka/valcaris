@@ -5,12 +5,10 @@
     background-color: #efefef;
     height: 100%;
 };
-
 mat-tab-group{
     width: 60%;
-    margin-top: 10%;
+    margin-top: 6%;
     width: 100%;
-    margin-top: 10%;
     margin-left: 10%;
     margin-right: 4%;
 };
@@ -31,4 +29,4 @@ mat-tab-group{
 };
 td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
     padding-right: 0;
-}
+};

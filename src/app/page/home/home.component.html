@@ -1,227 +1,214 @@
-<div id="all">
-    <div id="head">   
-        <div id="home">
-            <div class="title" *ngIf="desktopSize">
-                <h1><a class="valcaris" href="/" >valcaris</a></h1>
-            </div>
-                <div id="mediaTitle" *ngIf="mobileSize">Valcaris</div>
-               <div class="arrow"> <i class="fas fa-angle-down"></i></div>
-            <div class="about" [@scrollAnimation]="state">
-                <p> 
-                    Les Gîtes VALCARIS se situent au cœur des Balcons sud du Vercors, au sein du Parc Naturel Régional du Vercors.
-                </p> 
-                <p>
-                    Dans un écrin de verdure, à mi-chemin du Pays de la Gervanne et du Pays du Royans, à 980m d’altitude, nous vous
-                    accueillons dans une ancienne ferme du XVIIème, entièrement rénovée.
-                </p>
-                <p>
-                    Vous profiterez d’une nature sauvage, idéale pour vous ressourcer, randonner, voire herboriser.
-                </p>
-                <p>
-                    Vous pourrez vous fondre dans une faune et une flore naturellement abondantes. <br/>
-                </p>
-                <p>
-                    Avec les conseils de Roger vous pourrez envisager des ballades avec nos ânes.
-                </p>
-                <p>
-                    Nous pourrons également vous concocter aux beaux jours des itinéraires de randonnées pédestres ou à VTT, vous indiquer
-                    les superbes sites d’escalade ou de canyoning qui nous entourent, et dès que la neige arrive les possibilités de ski
-                    nordique ou de raquettes.
-                </p>
+ <div class="homeBody">  
+    <div id="all">
+        <div id="head">   
+            <div id="home">
+                <div class="title" *ngIf="desktopSize">
+                    <h1><a class="valcaris" href="/" >valcaris</a></h1>
+                </div>
+                    <div id="mediaTitle" *ngIf="mobileSize">Valcaris</div>
+                <div class="arrow"> <i class="fas fa-angle-down"></i></div>
+                <div class="about" [@scrollAnimation]="state">
+                    <p> 
+                        Les Gîtes VALCARIS se situent au cœur des Balcons sud du Vercors, au sein du Parc Naturel Régional du Vercors.
+                    </p> 
+                    <p>
+                        Dans un écrin de verdure, à mi-chemin du Pays de la Gervanne et du Pays du Royans, à 980m d’altitude, nous vous
+                        accueillons dans une ancienne ferme du XVIIème, entièrement rénovée.
+                    </p>
+                    <p>
+                        Vous profiterez d’une nature sauvage, idéale pour vous ressourcer, randonner, voire herboriser.
+                    </p>
+                    <p>
+                        Vous pourrez vous fondre dans une faune et une flore naturellement abondantes. <br/>
+                    </p>
+                    <p>
+                        Avec les conseils de Roger vous pourrez envisager des ballades avec nos ânes.
+                    </p>
+                    <p>
+                        Nous pourrons également vous concocter aux beaux jours des itinéraires de randonnées pédestres ou à VTT, vous indiquer
+                        les superbes sites d’escalade ou de canyoning qui nous entourent, et dès que la neige arrive les possibilités de ski
+                        nordique ou de raquettes.
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="gites">
-        <h2>Nos Gîtes</h2>
-        <mat-tab-group>
-            <mat-tab label="Le Fayard">
-                <div class="fayard" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-                    <div class="fayardDiv">
-                        <img class="fayardPicture" src="/assets/fayard/entree.jpg" alt="entree" routerLink="/fayard">
+        <div class="gites">
+            <h2>Nos Gîtes</h2>
+            <mat-tab-group>
+                <mat-tab label="Le Fayard">
+                    <div class="fayard" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        <div class="fayardDiv" *ngIf="desktopSize">
+                            <img class="fayardPicture" src="/assets/fayard/entree.jpg" alt="entree" routerLink="/fayard">
+                        </div>
+                        <div class="descriptionFayard" routerLink="/fayard" [style.opacity]="homeService.changeOfState">
+                            <div>
+                                <h1>Le Fayard</h1>
+                                <hr> <br/>
+                                <p>
+                                    Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de
+                                    notre propre
+                                    habitation.
+                                </p>
+                                <p>
+                                    Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort
+                                    nécessaire, tout en
+                                    conservant
+                                    le cachet de l’ancien.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="descriptionFayard" routerLink="/fayard" [style.opacity]="homeService.changeOfState">
-                        <div>
-                            <h1>Le Fayard</h1>
-                            <hr> <br/>
+                    <div class="info" *ngIf="homeService.showInfo" routerLink="/fayard">
+                        Cliquez pour plus d'information !
+                    </div>
+                    <div class="infoMedia" routerLink="/fayard">
+                        Cliquez pour plus d'information !
+                    </div>
+                </mat-tab>
+                <mat-tab label="Le Frène">
+                    <div class="frene" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        <div class="freneDiv">
+                            <img class="frenePicture" src="/assets/frene/entree.jpg" alt="" routerLink="/frene" *ngIf="desktopSize">
+                        </div>
+                        <div class="descriptionFrene" routerLink="/frene" [style.opacity]="homeService.changeOfState">
+                            <h1>Le Frene</h1>
+                            <hr> <br />
                             <p>
-                                Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de
-                                notre propre
+                                Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre
+                                propre
                                 habitation.
                             </p>
                             <p>
                                 Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort
-                                nécessaire, tout en
-                                conservant
+                                nécessaire, tout
+                                en conservant
                                 le cachet de l’ancien.
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="info" *ngIf="homeService.showInfo" routerLink="/fayard">
-                    Cliquez pour plus d'information !
-                </div>
-                <div class="infoMedia" routerLink="/fayard">
-                    Cliquez pour plus d'information !
-                </div>
-            </mat-tab>
-            <mat-tab label="Le Frène">
-                <div class="frene" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-                    <div class="freneDiv">
-                        <img class="frenePicture" src="/assets/frene/entree.jpg" alt="" routerLink="/frene">
+                    <div class="info" *ngIf="homeService.showInfo" routerLink="/frene">
+                        Cliquez pour plus d'information !
                     </div>
-                    <div class="descriptionFrene" routerLink="/frene" [style.opacity]="homeService.changeOfState">
-                        <h1>Le Frene</h1>
-                        <hr> <br />
-                        <p>
-                            Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre
-                            propre
-                            habitation.
-                        </p>
-                        <p>
-                            Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort
-                            nécessaire, tout
-                            en conservant
-                            le cachet de l’ancien.
-                        </p>
+                    <div class="infoMedia" >
+                        Cliquez pour plus d'information !
                     </div>
-                </div>
-                <div class="info" *ngIf="homeService.showInfo" routerLink="/frene">
-                    Cliquez pour plus d'information !
-                </div>
-                <div class="infoMedia" >
-                    Cliquez pour plus d'information !
-                </div>
-            </mat-tab>
-        </mat-tab-group>
-    </div>
-    <div class="presentation">
-        <div class="first">
-            <div class="pictureDiv">
-                <img class="firstPicture" src="/assets/firstPicture.jpg" alt="montagne">
-            </div>
-            <div class="firstParagraph">
-                <p>
-                    Au départ de nos gîtes des différentes randonnées vous seront proposées pour partir à la découverte d’orchis, de la
-                    flore et faune sauvage à travers nos sentiers balisés.
-                </p>
-                <p>
-                    Ces différentes randos peuvent se faire à pieds accompagné d’un âne équipé d’un bât, ou sans ami à quatre pattes.
-                </p>
-                <p>
-                    Nos deux gîtes communiquent si nécessaire (gîte de groupe) par le rez de chaussée et vous offrent tous les deux un
-                    espace extérieur avec table et banc de jardin, afin de profiter du silence, de l’air et du soleil de nos montagnes.
-                </p>
-                <p>
-                    A votre demande, nous tenons à votre disposition un barbecue.
-                </p>
-            </div>
+                </mat-tab>
+            </mat-tab-group>
         </div>
-        <div class="second"> 
-            <div class="pictureDiv">
-                <img class="secondPicture" src="/assets/secondPicture.jpg" alt="forest">
-            </div>   
-            <div class="secondParagraph">
-                <p>
-                Nos gîtes sont isolés ainsi que vous le montre cette photo, il vous faudra donc envisager les courses nécessaires par
-                avance : à votre disposition frigo et congélateur pour votre confort.
-                </p>
-                <p>
-                Cependant vous pourrez également vous faire plaisir et profiter des auberges sises à Léoncel, près de l’abbaye
-                cistercienne, ou encore au col de la Bataille ou au col des Limouches à moins de 5 minutes de nos gîtes.
-                </p>
-                <p>
-                Si vous en faites la demande par avance, vous pourrez partager notre table où je privilégie les légumes de mon jardin et
-                les produits des fermes les plus proches (fromages au lait de vache ou au lait de chèvre de Léoncel, viande du Chaffal
-                par exemple).
-                </p>
-                <p>
-                En fonction de vos envies, de vos besoins je cuisine avec plaisir végétarien, voire végétalien et/ou sans gluten.
-                </p>
-                <p>
-                Nous acceptons les animaux, chiens chats et même tortues, mais nos amis à quatre pattes ne sont pas autorisés dans les
-                étages.
-                </p>
+        <div class="presentation">
+            <div class="first">
+                <div class="pictureDiv" *ngIf="desktopSize">
+                    <img class="firstPicture" src="/assets/firstPicture.jpg" alt="montagne">
+                </div>
+                <div class="firstParagraph">
+                    <p>
+                        Au départ de nos gîtes des différentes randonnées vous seront proposées pour partir à la découverte d’orchis, de la
+                        flore et faune sauvage à travers nos sentiers balisés.
+                    </p>
+                    <p>
+                        Ces différentes randos peuvent se faire à pieds accompagné d’un âne équipé d’un bât, ou sans ami à quatre pattes.
+                    </p>
+                    <p>
+                        Nos deux gîtes communiquent si nécessaire (gîte de groupe) par le rez de chaussée et vous offrent tous les deux un
+                        espace extérieur avec table et banc de jardin, afin de profiter du silence, de l’air et du soleil de nos montagnes.
+                    </p>
+                    <p>
+                        A votre demande, nous tenons à votre disposition un barbecue.
+                    </p>
+                </div>
+            </div>
+            <div class="second"> 
+                <div class="pictureDiv">
+                    <img class="secondPicture" src="/assets/secondPicture.jpg" alt="forest" *ngIf="desktopSize">
+                </div>   
+                <div class="secondParagraph">
+                    <p>
+                    Nos gîtes sont isolés ainsi que vous le montre cette photo, il vous faudra donc envisager les courses nécessaires par
+                    avance : à votre disposition frigo et congélateur pour votre confort.
+                    </p>
+                    <p>
+                    Cependant vous pourrez également vous faire plaisir et profiter des auberges sises à Léoncel, près de l’abbaye
+                    cistercienne, ou encore au col de la Bataille ou au col des Limouches à moins de 5 minutes de nos gîtes.
+                    </p>
+                    <p>
+                    Si vous en faites la demande par avance, vous pourrez partager notre table où je privilégie les légumes de mon jardin et
+                    les produits des fermes les plus proches (fromages au lait de vache ou au lait de chèvre de Léoncel, viande du Chaffal
+                    par exemple).
+                    </p>
+                    <p>
+                    En fonction de vos envies, de vos besoins je cuisine avec plaisir végétarien, voire végétalien et/ou sans gluten.
+                    </p>
+                    <p>
+                    Nous acceptons les animaux, chiens chats et même tortues, mais nos amis à quatre pattes ne sont pas autorisés dans les
+                    étages.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<div class="carousel">
-    <ngb-carousel *ngIf="random">
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[0]" alt="Random first slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[1]" alt="Random second slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[2]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[3]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[4]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[5]" alt="Random third slide">
-            </div>
+    <div class="carousel">
+        <ngb-carousel *ngIf="random">
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[0]" alt="Random first slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[1]" alt="Random second slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[2]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[3]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[4]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[5]" alt="Random third slide">
+                </div>
 
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[6]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[7]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[8]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[9]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[10]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[11]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[12]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[13]" alt="Random third slide">
-            </div>
-        </ng-template>
-        <ng-template ngbSlide>
-            <div class="picsum-img-wrapper">
-                <img [src]="random[14]" alt="Random third slide">
-            </div>
-        </ng-template>
-    </ngb-carousel>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[6]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[7]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[8]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[9]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[10]" alt="Random third slide">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="random[11]" alt="Random third slide">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
 </div>
