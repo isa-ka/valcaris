@@ -292,22 +292,30 @@ ngb-carousel{
     };
 };
 @media (max-width: 400px){
-    .about, .firstParagraph, .secondParagraph{
+    .firstParagraph, .secondParagraph{
         width: 90%;
+        font-size: 1.2em;
+        padding-top: 20%;
+        padding-bottom: 20%;
     }
     .descriptionFayard, .descriptionFrene{
         width: 70%;
     }
+    .gites{
+        padding-top: 20%;
+        padding-bottom: 20%;
+    }
     .mat-tab-group{
        width:  100%!important;
     };
-    .about, .firstParagraph, .secondParagraph{
+    .about{
         font-size: 1.2em;
+        width: 90%;
     };
     .descriptionFayard, .descriptionFrene{
         font-size: 1.2em;
-    }
+    };
     h1, h2{
         font-size: 1.6em;
-    }
+    };
 }

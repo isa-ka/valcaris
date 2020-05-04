@@ -20,7 +20,16 @@ body {
   @media (max-width: 400px){
     .mat-tab-label-content{
       font-size: 1.5em;
-    }
+    };
+    .mat-menu-content {
+      background-color: #4a6873 !important;
+      opacity: 0.9;
+    };
+    .mat-menu-content span{
+      font-family: skinny;
+      color: #eae4e4;
+      font-size: 1.8em;
+    };
   }
 }
   @font-face{

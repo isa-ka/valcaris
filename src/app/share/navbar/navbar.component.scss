@@ -56,8 +56,12 @@ ul{
         position: absolute;
     };
 };
-@media screen, print,(max-width: 300){
+@media screen, print,(max-width: 400){
     .mobileVersion{
         width: auto;
     };
+    .up{
+        display: none;
+    }
+
 };
