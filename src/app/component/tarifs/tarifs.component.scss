@@ -38,11 +38,13 @@ td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:la
     };
     .mat-header-cell{
         font-size: 1.6em;
+        width: 50%;
     };
     .mat-cell{
         font-size: 1.2em;
     };
     td.mat-cell{
         padding-right: 5%;
-    }
-}
+    };
+    
+};

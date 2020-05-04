@@ -19,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { PhotoComponent } from './component/photo/photo.component';
 
 
 
@@ -31,6 +33,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     FayardComponent,
     FreneComponent,
     ContactComponent,
+    PhotoComponent,
     
   ],
   imports: [
@@ -46,7 +49,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NgbModule,
     MatTableModule,
     MatProgressBarModule,
-    
+    MatCardModule
 
 
   ],

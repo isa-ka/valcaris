@@ -231,6 +231,7 @@ ngb-carousel{
     display: flex;
     text-align: center;
 };
+
 //media queries
 @media (max-width: 1680px){
     .first, .second{
@@ -296,15 +297,18 @@ ngb-carousel{
         width: 90%;
         font-size: 1.2em;
         padding-top: 20%;
+    };
+    .secondParagraph{
         padding-bottom: 20%;
-    }
+
+    };
     .descriptionFayard, .descriptionFrene{
         width: 70%;
-    }
+    };
     .gites{
         padding-top: 20%;
         padding-bottom: 20%;
-    }
+    };
     .mat-tab-group{
        width:  100%!important;
     };
