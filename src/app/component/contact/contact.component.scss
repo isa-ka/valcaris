@@ -4,8 +4,24 @@
     display: flex;
     justify-content: space-around;
 };
+.mobile{
+    display: none;
+}
 .contactUs{
     font-family: skinny;
     font-size: 1.6em;
     margin-top: 10%;
+}
+@media (max-width : 400px){
+    .desktop{
+        display: none
+    };
+    .mobile{
+        display: block;
+    };
+    .body{
+        padding-top: 20%;
+        flex-direction: column;
+        align-items: center;
+    }
 }

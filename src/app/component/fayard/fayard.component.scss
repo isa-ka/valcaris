@@ -24,6 +24,9 @@ span{
     justify-content: center;
     background-color: #efefef;
 };
+.mobile{
+    display: none;
+};
 @media (max-width: 400px){
     .firstPara{
         padding-top: 24%;
@@ -32,4 +35,15 @@ span{
     .carousel{
         display: none
     };
-}
+    .example-card {
+        max-width: 200px;
+    };
+    .description{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%
+    };
+    .mobile{
+        display: block;
+    };
+};

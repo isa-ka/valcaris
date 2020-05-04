@@ -26,7 +26,19 @@ span{
     margin-bottom: 4%;
 };
 
+.mobile{
+    display: none;
+};
 @media (max-width: 400px){
+   
+    .description{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20%
+    }
+    .example-card {
+        max-width: 200px;
+    }
     .firstPara{
         padding-top: 24%;
         width: 90%;
@@ -34,4 +46,7 @@ span{
     .carousel{
         display: none
     };
-}
+    .mobile{
+        display: block
+    };
+};
