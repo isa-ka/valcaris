@@ -293,6 +293,15 @@ ngb-carousel{
 };
 @media (max-width: 400px){
     .about, .firstParagraph, .secondParagraph{
+        width: 90%;
+    }
+    .descriptionFayard, .descriptionFrene{
+        width: 70%;
+    }
+    .mat-tab-group{
+       width:  100%!important;
+    };
+    .about, .firstParagraph, .secondParagraph{
         font-size: 1.2em;
     };
     .descriptionFayard, .descriptionFrene{
