@@ -25,14 +25,11 @@ span{
     background-color: #efefef;
 };
 @media (max-width: 400px){
-    .description{
+    .firstPara{
         padding-top: 24%;
+        width: 90%;
     };
     .carousel{
-        max-width: 160;
-        max-height: 200px;
+        display: none
     };
-    .carousel{
-        display: none;
-    }
 }
