@@ -84,19 +84,18 @@ p{
     font-size: 200px;
 };
 .arrow i { 
-    margin-top: 6%;
     animation-duration: 8s;
     animation-name: scroll;
     opacity: 0;
 };
 @keyframes scroll {
-  from {margin-top: 8%; opacity: 0;}
+  from {margin-top: 4%; opacity: 0;}
     20%{margin-top: 12%; opacity: 0.4;}
-    30%{margin-top: 8%}
+    30%{margin-top: 4%}
     40%{margin-top: 12%; opacity: 1;}
-    50%{margin-top: 8% }
+    50%{margin-top: 4% }
     60%{margin-top: 12%}
-    70%{margin-top: 8%}
+    70%{margin-top: 4%}
   to {margin-top: 12%; opacity:0;}
 };
 //head
