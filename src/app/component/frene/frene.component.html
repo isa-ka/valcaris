@@ -1,1 +1,72 @@
-<app-ngbd-carousel-basic></app-ngbd-carousel-basic>
+<div class="body">  
+   <div class="description">
+        <div class="mobile">
+            <mat-card class="example-card">
+                <mat-card-header>
+                </mat-card-header>
+                <img mat-card-image src="assets/frene/entree.jpg" alt="Entree Frêne">
+            </mat-card>
+        </div>
+        <div class="firstPara">
+            <p>
+                Le gîte du Frêne fait partie avec son voisin le Fayard d’un corps de bâtiment proche de notre propre habitation.
+                Rénové par nos soins dans le souci du respect environnemental, il possède tout le confort nécessaire, tout en conservant
+                le cachet de l’ancien.
+                Il est sur deux niveaux :
+            </p>
+                <span>Au rez de chaussée :</span> 
+            <p>
+                Une salle de séjour avec coin cuisine équipé de toute la vaisselle utile à votre séjour, ainsi que d’une cuisinière, un
+                lave vaisselle, un micro onde, un réfrigérateur avec congélateur.
+                En effet nous sommes à 25 minutes en voiture des plus proches commerces et il est donc important de pouvoir prévoir
+                quelques courses à l’avance.
+                Toilettes et salle d’eau avec douche et lavabo séparées.
+                Un lave linge est également à votre disposition. 
+            </p>
+                <span> À l’étage :</span> 
+            <p>
+                Deux chambres et toilettes séparées : une chambre avec un lit double, et une chambre avec un lit double et trois lits
+                simples.
+            </p>
+        </div>
+    </div>
+    <div class="carousel">
+        <ngb-carousel *ngIf="assets">
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[0]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[1]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[2]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[3]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[4]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[5]" alt="">
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img [src]="assets[6]" alt="">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>

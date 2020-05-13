@@ -8,17 +8,29 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-
   .mat-elevation-z4{
     box-shadow: none;
     background-color: #1fe0;
   };
   .mat-tab-label-content{
-      font-size: 2.8em; 
+      font-size: 2.2em; 
       font-family: skinny;
       padding-bottom: 6%;
   };
-
+  @media (max-width: 400px){
+    .mat-tab-label-content{
+      font-size: 1.5em;
+    };
+    .mat-menu-content {
+      background-color: #4a6873 !important;
+      opacity: 0.9;
+    };
+    .mat-menu-content span{
+      font-family: skinny;
+      color: #eae4e4;
+      font-size: 1.8em;
+    };
+  }
 }
   @font-face{
   font-family: menu;

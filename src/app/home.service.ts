@@ -7,21 +7,20 @@ import { Injectable, Component, HostListener } from '@angular/core';
 
 
 export class HomeService {
-  showInfo: boolean = false;
-  changeOfState: number;
-  innerWidth: number;
-  screenSize: boolean = true;
+  public showInfo: boolean = false;
+  public changeOfState: number;
+  public innerWidth: number;
+  public screenSize: boolean = true;
   constructor() { }
+
 
   onMouseEnter() {
     this.showInfo = true;
     this.changeOfState = 0.2;
-    console.log(this.showInfo)
   };
   onMouseLeave() {
     this.showInfo = false;
     this.changeOfState = 1;
-    console.log(this.showInfo)
   }
 
 }

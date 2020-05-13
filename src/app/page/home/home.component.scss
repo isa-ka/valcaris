@@ -1,3 +1,8 @@
+mat-progress-bar{
+    position: fixed;
+    top: 0;
+};
+
 //common
 p{
     margin-top: 1%;
@@ -6,7 +11,7 @@ p{
 .about, .presentation, .echaillon, .info{
     font-family: skinny;
 };
-.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene, .infoMedia{
+.about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene{
     font-size: 1.6em;
 };
 #all{
@@ -20,19 +25,17 @@ p{
 	font-size: 4em;
 	color: #9e9ba4;
 	display: inline-block;
-}
+};
 .valcaris {
 	text-transform: uppercase;
 	font-weight: 900;
-    overflow: hidden;
-    line-height: 0.75;
+	overflow: hidden;
+	line-height: 0.75;
 	color: #424242;
-}
-
+};
 .valcaris:hover {
-	color: #b2b0a9;
-}
-
+	color: #b9a86a;
+};
 .valcaris::after {
 	content: '';
 	position: absolute;
@@ -45,12 +48,10 @@ p{
 	transform: translate3d(-100%,0,0);
 	transition: transform 0.4s;
 	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-}
-
+};
 .valcaris:hover::after {
 	transform: translate3d(100%,0,0);
-}
-
+};
 .valcaris::before {
 	content: attr(data-letters);
 	position: absolute;
@@ -60,8 +61,7 @@ p{
 	white-space: nowrap;
 	width: 0%;
 	transition: width 0.4s 0.3s;
-}
-
+};
 .valcaris:hover::before {
 	width: 100%;
 };
@@ -74,9 +74,33 @@ p{
     justify-content:center;
     margin-top: 14%;
     font-size: 8em
-}
+};
+//arrow animation
+.arrow{
+    text-align: center;
+    height: 120px;
+};
+.fa-angle-down{
+    font-size: 200px;
+};
+.arrow i { 
+    margin-top: 6%;
+    animation-duration: 8s;
+    animation-name: scroll;
+    opacity: 0;
+};
+@keyframes scroll {
+  from {margin-top: 8%; opacity: 0;}
+    20%{margin-top: 12%; opacity: 0.4;}
+    30%{margin-top: 8%}
+    40%{margin-top: 12%; opacity: 1;}
+    50%{margin-top: 8% }
+    60%{margin-top: 12%}
+    70%{margin-top: 8%}
+  to {margin-top: 12%; opacity:0;}
+};
 //head
-.head{
+#head{
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -121,10 +145,8 @@ h2{
 };
  .descriptionFayard, .descriptionFrene{
      cursor: pointer;
- };
- .descriptionFayard p, .descriptionFrene p,.first, .second{
-      font-size: 1.2em;
- };
+};
+
 .gites{
     background-color: #E5E5E5;
     width: 100%;
@@ -145,7 +167,7 @@ h2{
 };
 .second{
     margin-top: 4%; 
-}
+};
 .fayard,.frene{
     display: flex;
     justify-content: space-between;
@@ -156,7 +178,6 @@ h2{
     font-size: 4em;
     position: absolute;
     bottom: 50%;
-    left: 30%;
 };
 .firstParagraph, .secondParagraph{
     width: 60%;
@@ -170,16 +191,16 @@ h2{
 };
 .infoMedia{
     opacity: 0;
-}
+};
 //pictures
 .firstPicture, .secondPicture{
     height: auto;
     padding: 1%;
     border-radius: 10px;
     margin-top: 20%;
-}
+};
 .firstPicture{
-    width: 100%;
+  //  width: 100%;
     box-shadow: 1px 1px #4a6873, 24px -11px 17px #4a6873;
 };
 .secondPicture{
@@ -190,6 +211,7 @@ h2{
 };
 .fayardPicture, .frenePicture{
     cursor: pointer;
+    margin-left: 4%;
     margin-top: 10%;
 };
 .mat-tab-group{
@@ -201,30 +223,14 @@ h2{
 .carousel {
     margin-top: 2%;
     margin-bottom: 2%;
+    width: 80%;
+    margin-left: 10%;
+};
+
+ngb-carousel{
     display: flex;
-    justify-content: center;
-}
-.arrow{
     text-align: center;
-}
-.fa-angle-down{
-    font-size: 200px;
-}
-.arrow i { 
-    margin-top: 8%;
-    animation-duration: 8s;
-    animation-name: slidein;
-}
-@keyframes slidein {
-  from {margin-top: 8%; opacity: 0;}
-    20%{margin-top: 8%; opacity: 0;}
-    30%{margin-top: 8%}
-    40%{margin-top: 16%; opacity: 1;}
-    50%{margin-top: 8% }
-    60%{margin-top: 16%}
-    70%{margin-top: 8%}
-  to {margin-top: 16%; opacity:0;}
-}
+};
 
 //media queries
 @media (max-width: 1680px){
@@ -234,16 +240,18 @@ h2{
     .mat-tab-group{
        width:  90%!important;
     };
+    .info{
+    bottom: 70%;
+    left: 30%;
+    };
 };
-
 @media (max-width :1470px){
    .first,.second{
        flex-direction: column;
        align-items: center;
-       width: 50%;  
+       width: 80%;  
    };
    .firstParagraph, .secondParagraph{
-        width: 80%;
         padding-top: 5%;
         text-align: left;
         font-size: 1.2em;
@@ -257,24 +265,61 @@ h2{
         align-items: center;
         font-size: 0.8em !important;
     };
-    .infoMedia{
-        opacity: 1;
-        text-align: center;
+    .fayardPicture, .frenePicture{
+        margin-left: 0;
     };
 };
 @media (max-width: 990px){
     .about{
         width: 80%;
     };
-}
-@media screen, (max-width: 690 px){
+    .info{
+        opacity: 0;
+    };
+    .infoMedia{
+        opacity: 1;
+        text-align: center;
+    };
+    .carousel{
+        display: none;
+    };
+    .arrow{
+        display: none;
+    }
+};
+@media (max-width: 690px){
     #mediaTitle {
         font-size: 4em;
-    }
-}
-@media screen,(max-width: 300){
-    .presentation{
-        width: auto;
     };
- 
+};
+@media (max-width: 400px){
+    .firstParagraph, .secondParagraph{
+        width: 90%;
+        font-size: 1.2em;
+        padding-top: 20%;
+    };
+    .secondParagraph{
+        padding-bottom: 20%;
+
+    };
+    .descriptionFayard, .descriptionFrene{
+        width: 70%;
+    };
+    .gites{
+        padding-top: 20%;
+        padding-bottom: 20%;
+    };
+    .mat-tab-group{
+       width:  100%!important;
+    };
+    .about{
+        font-size: 1.2em;
+        width: 90%;
+    };
+    .descriptionFayard, .descriptionFrene{
+        font-size: 1.2em;
+    };
+    h1, h2{
+        font-size: 1.6em;
+    };
 }

@@ -17,7 +17,10 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatGridListModule, MatGridList } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { NgbdCarouselBasicModule } from "./ngbd-carousel-basic/carousel-basic.module";
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatCardModule } from '@angular/material/card';
+import { PhotoComponent } from './component/photo/photo.component';
 
 
 
@@ -30,6 +33,8 @@ import { NgbdCarouselBasicModule } from "./ngbd-carousel-basic/carousel-basic.mo
     FayardComponent,
     FreneComponent,
     ContactComponent,
+    PhotoComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -42,8 +47,9 @@ import { NgbdCarouselBasicModule } from "./ngbd-carousel-basic/carousel-basic.mo
     MatGridListModule,
     MatIconModule,
     NgbModule,
-    NgbdCarouselBasicModule,
-    
+    MatTableModule,
+    MatProgressBarModule,
+    MatCardModule
 
 
   ],

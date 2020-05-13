@@ -1,0 +1,50 @@
+.tarif{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #efefef;
+    height: 100%;
+};
+mat-tab-group{
+    margin-top: 6%;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 4%;
+};
+.mat-elevation-z8{
+    margin-top: 8%;
+    margin-left: 4%;
+    width: 80%;
+};
+.mat-header-cell{
+    color: black;
+    font-size: 2em;
+    font-family: skinny;
+};
+.mat-cell{
+    font-family: skinny;
+    font-size: 1.6em;
+    color: #673ab7;
+};
+td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:last-of-type {
+    padding-right: 0;
+};
+@media (max-width: 400px){
+    mat-tab-group{
+        padding-top: 20%; 
+    };
+    .mat-tab-label .mat-tab-label-content{
+        font-size: 1.8em;
+    };
+    .mat-header-cell{
+        font-size: 1.6em;
+        width: 50%;
+    };
+    .mat-cell{
+        font-size: 1.2em;
+    };
+    td.mat-cell{
+        padding-right: 5%;
+    };
+    
+};

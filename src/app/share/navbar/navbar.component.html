@@ -1,31 +1,43 @@
-<nav>
+<nav id="up">
     <ul>
-        <li  data-hover="Accueil"  routerLink="/">Accueil</li>
+        <li  data-hover="Accueil" routerLink="/">Accueil</li>
         <li  data-hover="Le Fayard" routerLink="/fayard">Le Fayard</li>
         <li  data-hover="Le Frêne" routerLink="frene">Le Frêne</li>
         <li  data-hover="Tarifs" routerLink="tarifs">Tarifs</li>
         <li  data-hover="Contact" routerLink="/contact">Contact</li>
     </ul>
 </nav>
+<div class="up" *ngIf="upArrow">
+    <a href="#up">
+        <mat-icon aria-hidden="false">
+            keyboard_arrow_up
+        </mat-icon>
+    </a>
+</div>
 <div class="mobileVersion">
     <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>menu</mat-icon>
     </button>
+    <div>
     <mat-menu #menu="matMenu">
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/">
             <span>Accueil</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/fayard">
             <span>Le Fayard</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="frene">
             <span>Le Frêne</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="tarifs">
             <span>Tarif</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item routerLink="/photo">
+            <span>Photos</span>
+        </button>
+        <button mat-menu-item routerLink="/contact">
             <span>Contact</span>
         </button>
     </mat-menu>
+    </div>
 </div>
