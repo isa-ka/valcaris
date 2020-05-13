@@ -36,8 +36,6 @@ export class HomeComponent implements OnInit {
     config.keyboard = true;
     config.pauseOnHover = true;
    }
-
-   
   
   ngOnInit() {
     this.onResize();
