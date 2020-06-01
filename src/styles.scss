@@ -3,11 +3,6 @@
 html, body { height: 100%;}
 body { 
   margin: 0; 
-  font-family: Roboto, "Helvetica Neue", sans-serif; 
-  background-color: #f9f9f9; 
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   .mat-elevation-z4{
     box-shadow: none;
     background-color: #1fe0;
@@ -17,6 +12,15 @@ body {
       font-family: skinny;
       padding-bottom: 6%;
   };
+  .carousel-indicators li{
+    background-color:#4a6873 ;
+    width: 38px;
+    height: 6px;
+  };
+  .carousel-control-prev-icon, .carousel-control-next-icon{
+    width: 100px;
+    height: 50px;
+  }
   @media (max-width: 400px){
     .mat-tab-label-content{
       font-size: 1.5em;

@@ -1,8 +1,12 @@
+.homeBody{
+    background-image: url(../../../assets/background.png);
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+};
 mat-progress-bar{
     position: fixed;
     top: 0;
 };
-
 //common
 p{
     margin-top: 1%;
@@ -14,9 +18,9 @@ p{
 .about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene{
     font-size: 1.6em;
 };
-#all{
-    background-color: #efefef;
-};
+img{
+    max-width: 80%;
+}
 //title animation
 .link {
 	outline: none;
@@ -86,17 +90,17 @@ p{
 .arrow i { 
     animation-duration: 8s;
     animation-name: scroll;
-    opacity: 0;
+    opacity: 0.6;
 };
 @keyframes scroll {
-  from {margin-top: 4%; opacity: 0;}
+  from {margin-top: 0%; opacity: 0;}
     20%{margin-top: 12%; opacity: 0.4;}
-    30%{margin-top: 4%}
+    30%{margin-top: 0%}
     40%{margin-top: 12%; opacity: 1;}
-    50%{margin-top: 4% }
+    50%{margin-top: 0% }
     60%{margin-top: 12%}
-    70%{margin-top: 4%}
-  to {margin-top: 12%; opacity:0;}
+    70%{margin-top: 0%}
+  to {margin-top: 0%; opacity:0.6;}
 };
 //head
 #head{
@@ -137,21 +141,40 @@ h2{
     text-align: justify;
 };
 //body
-.presentation{
-    background-color: #d6d2d2;
-    width: 100%;
-    display: inline-block
+.presentationContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6%;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(74,104,115,1) 57%, rgba(55,77,86,1) 81%, rgba(65,64,64,1) 100%);
 };
+.presentation{
+    background-color: #e5e5e5;
+    width: 80%;
+    border-radius: 20px;
+    margin-top: 4%;
+    margin-bottom: 4%;
+};
+.fayardDiv, .freneDiv{
+    display: flex;
+    justify-content: center;
+}
  .descriptionFayard, .descriptionFrene{
      cursor: pointer;
 };
 
+.gitesContainer{
+    display: flex;
+    justify-content: center;
+}
 .gites{
     background-color: #E5E5E5;
-    width: 100%;
+    width: 80%;
     display: inline-block;
     padding-bottom: 10%;
     height: 100%;
+    border-radius: 20px;
 };
 .first, .second{
     width: 80%;
@@ -219,17 +242,12 @@ h2{
 };
 //carousel
 .carousel {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    width: 80%;
-    margin-left: 10%;
+    padding-bottom: 4%;
 };
-
 ngb-carousel{
     display: flex;
     text-align: center;
 };
-
 //media queries
 @media (max-width: 1680px){
     .first, .second{

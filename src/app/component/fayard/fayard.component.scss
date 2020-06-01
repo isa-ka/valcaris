@@ -1,10 +1,15 @@
+.body{
+    background-color: #efefef;
+}
 .carousel {
     margin-top: 2%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 4%;
+    text-align: center;
+    padding-bottom: 4%;
 };
-
+img{
+    max-width: 60%;
+    max-height: 600px;
+};
 .carousel .carousel-control-next-icon{
         background-size: 50px;
 };
@@ -22,12 +27,15 @@ span{
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #efefef;
 };
 .mobile{
     display: none;
 };
 @media (max-width: 400px){
+    img{
+        max-width: unset;
+        max-height: unset;
+    }
     .firstPara{
         padding-top: 24%;
         width: 90%;
