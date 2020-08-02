@@ -3,7 +3,10 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    width: 100%
+    background-position: right;
+    margin:0;
+    padding:0;
+    -webkit-background-size: cover; /* pour anciens Chrome et Safari */
 };
 mat-progress-bar{
     position: fixed;
@@ -18,7 +21,7 @@ p{
     font-family: skinny;
 };
 .about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene{
-    font-size: 1.6em;
+    font-size: 1.8em;
 };
 .gites img{
     max-width: 80%;
@@ -270,11 +273,6 @@ ngb-carousel{
        align-items: center;
        width: 80%;  
    };
-   .firstParagraph, .secondParagraph{
-        padding-top: 5%;
-        text-align: left;
-        font-size: 1.2em;
-    };
     .fayard,.frene{
         align-items: center;
         margin-top: 4%;
@@ -312,6 +310,9 @@ ngb-carousel{
     };
 };
 @media (max-width: 400px){
+    #mediaTitle{
+        color: #b9a86a;
+    }
     .firstParagraph, .secondParagraph{
         width: 90%;
         font-size: 1.2em;
@@ -333,7 +334,7 @@ ngb-carousel{
     };
     .about{
         font-size: 1.2em;
-        width: 90%;
+        padding: 15px;
     };
     .descriptionFayard, .descriptionFrene{
         font-size: 1.2em;
