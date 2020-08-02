@@ -7,8 +7,7 @@
 };
 mat-tab-group{
     margin-top: 6%;
-    margin-left: auto;
-    margin-right: auto;
+
 };
 .mat-elevation-z8{
     margin-top: 8%;
@@ -31,6 +30,7 @@ td.mat-cell:last-of-type, td.mat-footer-cell:last-of-type, th.mat-header-cell:la
 @media (max-width: 400px){
     mat-tab-group{
         padding-top: 20%; 
+        width: 90%;
     };
     .mat-tab-label .mat-tab-label-content{
         font-size: 1.8em;
