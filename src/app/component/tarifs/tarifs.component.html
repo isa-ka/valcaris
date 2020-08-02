@@ -1,6 +1,6 @@
 <div class="tarif">  
     <mat-tab-group>
-        <mat-tab label="Gîtes Max 6 personnes ">
+        <mat-tab label="Gîtes (max 6 personnes)">
             <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
                 <ng-container matColumnDef="nuits">
                     <th mat-header-cell *matHeaderCellDef> Nuits </th>
@@ -14,7 +14,7 @@
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
             </table>
         </mat-tab>
-        <mat-tab label="Gîte de groupe (15 pers. max) ">
+        <mat-tab label="Gîte de groupe (max 15 pers.)">
             <table mat-table [dataSource]="data" class="mat-elevation-z8">
             <ng-container matColumnDef="nuits">
                 <th mat-header-cell *matHeaderCellDef> Nuits </th>
