@@ -46,19 +46,14 @@ export class HomeComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset
-    //console.log(scrollPosition)
     if (scrollPosition >= componentPosition) {
       this.state = 'show';
     }
     else {
       this.state = 'hide'
     }; 
-
-
- 
-
-    //console.log(this.value)
   };
+
   onMouseEnter(){
     this.homeService.onMouseEnter();
   };
@@ -67,7 +62,6 @@ export class HomeComponent implements OnInit {
   };
 
   @HostListener("window:resize", ['$event'])
-
   onResize(){
     this.innerWidth = window.innerWidth;
     if (innerWidth <= 990 ) {

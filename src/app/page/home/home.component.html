@@ -6,7 +6,7 @@
                     <h1><a class="valcaris" href="/" >valcaris</a></h1>
                 </div>
                     <div id="mediaTitle" *ngIf="mobileSize">Valcaris</div>
-                <div class="arrow"> <i class="fas fa-angle-down"></i></div>
+                <div class="arrow"><a href="#gites"> <i class="fas fa-angle-down"></i> </a> </div>
                 <div class="about" [@scrollAnimation]="state">
                     <p> 
                         Les Gîtes VALCARIS se situent au cœur des Balcons sud du Vercors, au sein du Parc Naturel Régional du Vercors.
@@ -32,16 +32,16 @@
                 </div>
             </div>
         </div>
-        <div class="gitesContainer">
+        <div class="gitesContainer"  id="gites">
             <div class="gites">
                 <h2>Nos Gîtes</h2>
                 <mat-tab-group>
                     <mat-tab label="Le Fayard">
-                        <div class="fayard" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        <div class="fayard" >
                             <div class="fayardDiv" *ngIf="desktopSize">
                                 <img class="fayardPicture" src="/assets/fayard/entree.jpg" alt="entree" routerLink="/fayard">
                             </div>
-                            <div class="descriptionFayard" routerLink="/fayard" [style.opacity]="homeService.changeOfState">
+                            <div class="descriptionFayard" routerLink="/fayard" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"[style.opacity]="homeService.changeOfState">
                                 <div>
                                     <h1>Le Fayard</h1>
                                     <hr> <br/>
@@ -49,24 +49,20 @@
                                         Tout comme son voisin le Frêne, le gîte du Fayard, d’une superficie d’environ 60m²,
                                         entièrement rénové par nos soins,
                                         conserve son charme d’antan avec son carrelage d’origine.
-                                        
                                     </p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="info" *ngIf="homeService.showInfo" routerLink="/fayard">
-                            Cliquez pour plus d'information !
                         </div>
                         <div class="infoMedia" routerLink="/fayard">
                             Cliquez pour plus d'information !
                         </div>
                     </mat-tab>
                     <mat-tab label="Le Frène">
-                        <div class="frene" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+                        <div class="frene" >
                             <div class="freneDiv">
                                 <img class="frenePicture" src="/assets/frene/entree.jpg" alt="" routerLink="/frene" *ngIf="desktopSize">
                             </div>
-                            <div class="descriptionFrene" routerLink="/frene" [style.opacity]="homeService.changeOfState">
+                            <div class="descriptionFrene" routerLink="/frene" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" [style.opacity]="homeService.changeOfState">
                                 <h1>Le Frene</h1>
                                 <hr> <br />
                                 <p>
@@ -76,9 +72,6 @@
                                     il possède tout le confort nécessaire, tout en conservant le cachet de l’ancien.
                                 </p>
                             </div>
-                        </div>
-                        <div class="info" *ngIf="homeService.showInfo" routerLink="/frene">
-                            Cliquez pour plus d'information !
                         </div>
                         <div class="infoMedia" >
                             Cliquez pour plus d'information !

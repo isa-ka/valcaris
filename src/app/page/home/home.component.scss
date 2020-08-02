@@ -1,7 +1,9 @@
 .homeBody{
-    background-image: url(../../../assets/background.png);
+    background-image: url(../../../assets/maisonCopie.jpg);
     background-repeat: no-repeat;
-    //background-attachment: fixed;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%
 };
 mat-progress-bar{
     position: fixed;
@@ -18,9 +20,10 @@ p{
 .about, .firstParagraph, .secondParagraph, .descriptionFayard, .descriptionFrene{
     font-size: 1.6em;
 };
-img{
+.gites img{
     max-width: 80%;
 }
+
 //title animation
 .link {
 	outline: none;
@@ -35,7 +38,7 @@ img{
 	font-weight: 900;
 	overflow: hidden;
 	line-height: 0.75;
-	color: #424242;
+	color: #b2bdb1;
 };
 .valcaris:hover {
 	color: #b9a86a;
@@ -88,9 +91,9 @@ img{
     font-size: 200px;
 };
 .arrow i { 
-    animation-duration: 8s;
-    animation-name: scroll;
+    animation: scroll 8s infinite;
     opacity: 0.6;
+    color: #b2bdb1
 };
 @keyframes scroll {
   from {margin-top: 0%; opacity: 0;}
@@ -100,7 +103,7 @@ img{
     50%{margin-top: 0% }
     60%{margin-top: 12%}
     70%{margin-top: 0%}
-  to {margin-top: 0%; opacity:0.6;}
+  to {margin-top: 0%; opacity:0;}
 };
 //head
 #head{
@@ -137,7 +140,7 @@ h2{
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 4%;
+    margin-top: 20%;
     text-align: justify;
 };
 //body

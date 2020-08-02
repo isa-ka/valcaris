@@ -55,12 +55,12 @@ ul{
         display: block;
         position: absolute;
     };
+    .up{
+        display: none;
+    };
 };
 @media (max-width: 400){
     .mobileVersion{
         width: auto;
-    };
-    .up{
-        display: none;
     };
 };
