@@ -27,7 +27,7 @@ nav li:focus::before {
     margin-right: 4%
 };
 mat-icon {
-    color: #4a6873;
+    color: #efefef;
     height: auto;
     width: auto;
 };
@@ -62,3 +62,8 @@ ul{
         width: auto;
     };
 };
+@media (max-width: 400px){
+    mat-icon{
+        color: #4a6873 
+    }
+}
