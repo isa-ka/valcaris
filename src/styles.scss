@@ -25,6 +25,9 @@ body {
     width: 100px;
     height: 50px;
   }
+  .bordered{
+    border-radius: 20px;
+  }
   @media (max-width: 500px){
     .mat-tab-label-content{
       font-size: 1.5em;

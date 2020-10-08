@@ -45,8 +45,6 @@ export class HomeComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    console.log(this.viewportScroller)
-
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
     if (scrollPosition >= componentPosition) {
