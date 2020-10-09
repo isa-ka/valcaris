@@ -138,12 +138,12 @@
                 <ngb-carousel *ngIf="random">
                     <ng-template ngbSlide>
                         <div class="picsum-img-wrapper">
-                            <img [src]="random[0]" alt="Random first slide">
+                            <img class="bordered"[src]="random[0]" alt="Random first slide">
                         </div>
                     </ng-template>
                     <ng-template ngbSlide>
                         <div class="picsum-img-wrapper">
-                            <img [src]="random[1]" alt="Random second slide">
+                            <img class="bordered" [src]="random[1]" alt="Random second slide">
                         </div>
                     </ng-template>
                     <ng-template ngbSlide>
@@ -163,9 +163,8 @@
                     </ng-template>
                     <ng-template ngbSlide>
                         <div class="picsum-img-wrapper">
-                            <img [class="bordered" src]="random[5]" alt="Random third slide">
-                        </div>
-            
+                            <img class="bordered" [src]="random[5]" alt="Random third slide">
+                        </div>          
                     </ng-template>
                     <ng-template ngbSlide>
                         <div class="picsum-img-wrapper">
@@ -175,11 +174,6 @@
                     <ng-template ngbSlide>
                         <div class="picsum-img-wrapper">
                             <img class="bordered" [src]="random[7]" alt="Random third slide">
-                        </div>
-                    </ng-template>
-                    <ng-template ngbSlide>
-                        <div class="picsum-img-wrapper">
-                            <img class="bordered" [src]="random[8]" alt="Random third slide">
                         </div>
                     </ng-template>
                 </ngb-carousel>
